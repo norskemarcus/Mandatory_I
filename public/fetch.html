@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    
+  <!-- FontAwesome library  -->
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+
+<!-- hljs.registerLanguage('javascript', javascript); -->
+    <script>
+    hljs.highlightAll();
+    </script>
+
+
+    <title>Fetch</title>
+  </head>
+  <body>
+    <header>
+      <a href="frontpage.html" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1 class="header-title">Fetch</h1>
+    </header>
+
+     <!-- Include the sidebar using JavaScript -->
+    <div class="container-fluid">
+      <div class="row"> 
+        <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block bg-light sidebar"></nav>
+       <div id="sidebar-placeholder"></div>
+      </nav>
+       
+      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+        <div class="">
+          <!-- Title column -->
+          <div class="col-md-6">
+            <h2>XXX</h2> <!-- Add the title here -->
+          </div>
+
+             <!-- Code snippet column -->
+            <pre class="hljs theme-atom-one-dark">
+            <code class="language-javascript"> 
+  fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemonId}/`)
+   .then(response => response.json())
+  // evt error handling her med da skal det return på response.json()
+  .then(result => {
+    const name = result.name;
+    console.log('Name:', name);
+
+    document.getElementById('randomPokemon').innerText = name;
+
+    const imageWrapper = document.getElementById('image-wrapper');
+    imageWrapper.innerHTML = `&lt;img src="${result.sprites.other.home.front_default}"/&gt;`;
+  })
+  .catch(error => {
+    console.error('Error fetching data:', error);
+  });
+
+            </code>
+          </pre>
+          </main>
+       </div>
+    
+
+    <script  type="module" 
+      src="./sidebar.js"
+    ></script>
+  </body>
+</html>

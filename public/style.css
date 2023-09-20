@@ -1,0 +1,82 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #0bb66f;
+  color: white;
+  padding: 10px;
+  display: flex;
+  align-items: center; /* Vertically center the content */
+  justify-content: center; /* Horizontally center the content */
+}
+
+.header-icon {
+  font-size: 24px;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.header-title {
+  margin: 0;
+  flex-grow: 1; /* Allow the title to take up remaining space */
+  text-align: center; 
+}
+
+.container {
+  display: flex;
+}
+
+/* Custom styles for the sidebar */
+.sidebar {
+  background-color: 'grey';
+  color: white;
+  padding: '5%';
+  display: flex;
+  flex-direction: column;
+  /* height: 100em; make the sidebar "continue down" */
+}
+/* Custom styles for the sidebar titles */
+.nav-link {
+  color: black; 
+}
+.dropdown {
+  list-style: none;
+  cursor: pointer;
+}
+
+/* Custom styles for dropdown buttons */
+.dropdown-btn {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+/* Custom styles for dropdown menus */
+.dropdown-menu {
+  margin-left: 5px;
+  display: none;
+  list-style: none;
+}
+
+.dropdown span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.submenu {
+  display: none;
+  list-style: none;
+  margin-left: 5px;
+}
+
+/* Main content styles */
+main {
+  flex: 1;
+  padding: 20px;
+}
+
+
