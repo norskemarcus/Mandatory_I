@@ -1,0 +1,48 @@
+
+
+.info-box {
+  background-color: #bd0b0b;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.info-box h2 {
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.info-box p {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+/* Style for code snippets */
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  line-height: 1.5;
+  font-size: small;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+code {
+  color: #333;
+  font-size: 16px;
+}
+
+
+/* Style for the Admin Sign In link */
+.admin-link {
+  font-weight: bold; 
+  color: black; 
+  text-decoration: none; 
+  margin-right: 20px; 
+}
+
+.section-text {
+  margin-bottom: 40px;
+}

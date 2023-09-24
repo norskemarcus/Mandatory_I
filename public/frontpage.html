@@ -6,37 +6,110 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <!-- Add Popper.js (required by some Bootstrap components) -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+
+    <script type="module" src="./sidebar.js"></script>
+
+    <script type="module" src="./frontpage.js" ></script>
+  
+
+  <!-- Add Popper.js (required by some Bootstrap components) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+  <!-- Add Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+  
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Add Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!-- Add Bootstrap JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="style.css"/>
 
-
-    <link rel="stylesheet" href="style.css"/>
     <title>Dokumentation</title>
   </head>
   <body>
     <header>
-      <h1>Mandatory I: dokumentation</h1>
+  
+  
+   <a href="javascript:void(0);" class="icon" id="mobileMenuIcon">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <h1 class="header-title">Kodekilden</h1>
+
+   <!-- Button trigger modal -->
+   <button type="button" class="btn btn-outline-success font-monospace text-white" data-bs-toggle="modal" data-bs-target="#signInModal">
+    Sign in
+  </button>
+
+        <!-- Modal for Sign In -->
+         
+<!-- Modal for Sign In -->
+<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+  <div class="modal-dialog bg-light-subtle">
+      <div class="modal-content">
+          <div class="modal-header bg-success">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body bg-body-tertiary">
+              <!-- Add your sign-in form or content here -->
+              <form id="signInForm">
+                  <!-- Input fields for username and password -->
+                  <div class="mb-3">
+                      <label for="email" class="form-label font-monospace text-success">Email</label>
+                      <input type="email" class="form-control" id="email" name="email" placeholder="test@example.com">
+                  </div>
+                  <div class="mb-3">
+                      <label for="password" class="form-label font-monospace text-success">Password</label>
+                      <input type="password" class="form-control" id="password" name="password" placeholder="test">
+                  </div>
+              </form>
+         
+    <div id="messageDiv"></div>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-outline-success font-monospace text-success" data-bs-dismiss="modal" id="signInButton">Sign In</button>
+          </div>
+      </div>
+  </div>
+</div>
+
     </header>
+
+    <!-- Mobile menu container (initially hidden) -->
+  <div id="mobileMenu" class="mobile-menu">
+    
+    <!-- Mobile menu content will be generated dynamically -->
+  </div>
 
     <div class="container-fluid">
       <div class="row">
        <div id="sidebar-placeholder"></div>
       
            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-         <h2>HER KOMMER EN TEST FOR AT CHECKE HVOR JEG KAN FÅ DENNE TEKSTEN TIL AT VÆRE</h2>
+            <div class="infoboks">
+              <h2>Velkommen til Dokumentationswebsitet!</h2>
+              <p>
+                  Dette website er en del af skoleopgaven i valgfaget "Fullstack Node.js" på KEA - Københavns Erhvervsakademi.
+                  Vær opmærksom på, at forklaringerne her er udarbejdet af mig, og der kan forekomme faktuelle fejl eller misforståelser.
+                  Formålet med denne dokumentation er at dele viden og erfaringer om emnerne, der er blevet behandlet i løbet af kurset.
+                  Tak fordi du kigger forbi, og jeg håber, at du finder websitet nyttigt!
+              </p>
+          </div>
+
+    
+  `;
+
+    
           </main>
        </div>
     </div>
 
 
-    <script  type="module" 
-      src="./sidebar.js"
-    ></script>
   </body>
 </html>

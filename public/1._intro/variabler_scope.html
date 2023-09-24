@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="1._intro/intro.css">
+
+    <title>Variabler og scope</title>
+  </head>
+  <body>
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="#" class="icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Variabler og scope</h1>
+    </header>
+    
+   <!--  <header>
+      <a href="/" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+
+   <a href="javascript:void(0);" class="icon" id="mobileMenuIcon">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="admin-login.html" class="admin-link">Admin Sign In</a>
+  <h1 class="header-title">Klient-server-modellen</h1>
+    </header> -->
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+        <section class="section-text">
+          <h2>Variabler</h2>
+          <p>
+            I JavaScript er variabler en fundamental koncept, der giver dig mulighed for at gemme og håndtere data i din kode. Der er tre vigtige typer af variabler i JavaScript: "let," "var," og "const." Det er vigtigt at bemærke, at "var" er en ældre og mindre anbefalet måde at erklære variabler på, mens "let" og "const" er mere moderne og foretrukne. Det er vigtigt at forstå forskellene mellem dem og, endnu vigtigere, hvordan de påvirker scopet af deklarerede variabler.
+          </p>
+        </section>
+      
+        <section class="section-text">
+          <h3>var</h3>
+          <ul>
+            <li>Variabler, der erklæres med <i>var</i>, var den oprindelige måde at erklære variabler på i JavaScript. Her er nogle vigtige punkter at huske:</li>
+            <ul>
+              <li><strong>Globalt scope:</strong> Variabler, der erklæres med <i>var</i>, har et globalt scope. Dette betyder, at de kan tilgås fra hvor som helst i dit kodeprojekt, hvilket kan føre til uønsket opførsel og konflikter.</li>
+              
+              <li><strong>Hoisting:</strong> <i>var</i>-variabler hoistes, hvilket betyder, at de kan blive deklareret efter at de bruges. Dette kan føre til forvirring og uventet adfærd i dit kodeprojekt!</li>
+            </ul>
+          </ul>
+          
+          <p>
+            Lad os se på et eksempel:
+          </p>
+          <pre><code>
+            {
+              var someVariabel = true;
+              {
+                var someVariabel = false;
+              }
+              console.log(someVariabel); // false
+            }
+          </code></pre>
+          
+          <p>
+            Her vil variabelen ændre sig til false, fordi <i>var</i> har et globalt scope. Ændrer man datatypen til en let, kan man nemt se at someVariabel inde i scopet ikke bliver highlighted og den forbliver dermed true.
+          </p>
+        </section>
+      
+        <section class="section-text">
+          <h3>let</h3>
+          <ul>
+            <li>"Let"-variabler blev introduceret med ES6 og er den anbefalede måde at erklære variabler på i moderne JavaScript. Her er nogle nøglepunkter:</li>
+            <ul>
+              <li>Blokscope: Variabler, der erklæres med "let", har et blokscope. Dette betyder, at de kun er synlige inden for den blok, hvor de er deklareret. Dette giver mere kontrol og mindre risiko for konflikter.</li>
+              <li>Ingen hoisting: "Let"-variabler hoistes ikke, hvilket betyder, at de skal deklareres, før de bruges. Dette giver en mere forståelig og forudsigelig kodeadfærd.</li>
+            </ul>
+          </ul>
+          
+          <p>
+            Her er et eksempel:
+          </p>
+          <pre><code>
+            console.log(y); // Fejl: y er ikke defineret
+            let y = 20;
+          </code></pre>
+          
+          <p>
+            I dette tilfælde giver det en fejl, fordi vi forsøger at udskrive "y", før det er deklareret.
+          </p>
+        </section>
+      
+        <section class="section-text">
+          <h3>const ≠ konstant</h3>
+          <p>
+            Datatypen const skal ikke forstås som en konstant, fordi man kan godt ændre værdier i en const, men man kan ikke <i>redeklarere</i> en const. Det er også vigtigt at det er nødvendigt at <i>initialisere</i> en const, men det behøver man ikke med en let. 
+          </p>
+      
+          <p>
+            Her er et eksempel:
+          </p>
+          <pre><code>
+            const isThisConstant = [];
+            isThisConstant.push(1,2,3); // (3) [1, 2, 3]
+
+            const PI = 3.14159;
+            PI = 22 / 7; // Fejl: Kan ikke ændre værdien af en konstant 
+          </code></pre>
+          
+          <p>
+            Som du kan se, giver det en fejl, når vi forsøger at ændre værdien af "PI", men derimod er det fuldt lovligt at ændre værdien af arrayet over.
+          </p>
+        </section>
+    
+      </main>
+      
+       </div>
+    </div>
+
+
+  <script type="module" src="../sidebar.js"></script>
+
+  <script type="module" src="../mobileMenu.js"></script>
+
+
+  </body>
+</html>

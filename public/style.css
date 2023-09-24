@@ -18,6 +18,7 @@ header {
   font-size: 24px;
   margin-right: auto;
   margin-left: 10px;
+  color: black;
 }
 
 .header-title {
@@ -28,16 +29,21 @@ header {
 
 .container {
   display: flex;
+  justify-content: space-between; /* Add this to separate the sidebar and main content */
 }
 
 /* Custom styles for the sidebar */
-.sidebar {
-  background-color: 'grey';
+/* .sidebar {
+  background-color: grey;
   color: white;
-  padding: '5%';
+  padding: 5%;
   display: flex;
   flex-direction: column;
-  /* height: 100em; make the sidebar "continue down" */
+  
+} */
+
+#sidebar-placeholder {
+  width: 0;
 }
 /* Custom styles for the sidebar titles */
 .nav-link {
@@ -79,4 +85,193 @@ main {
   padding: 20px;
 }
 
+
+/* Hide the hamburger icon by default */
+.icon {
+  display: none;
+}
+
+
+/* CSS styles for the mobile menu */
+.mobile-menu {
+  display: none;
+  background-color: #0bb66f;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.mobile-menu-item {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.mobile-menu-item:hover {
+  background-color: #097e54;
+  transition: background-color 0.3s;
+}
+
+#messageDiv {
+  background-color: #f8d7da; 
+  color: #721c24; /* Text color */
+  padding: 10px;
+  border: 1px solid #f5c6cb; 
+  margin-top: 10px;
+  display: none; 
+}
+
+/* 
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 500px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+.modal-body {
+  padding: 20px;
+}
+
+
+.modal-footer {
+  padding-top: 10px;
+  text-align: right;
+}
+
+.openModalButton{
+  background-color: "#0bb66f";
+  color: black
+}
+ */
+
+
+/* CSS for Mobile Screens */
+@media screen and (max-width: 768px) {
+  /* Hide the sidebar by default on mobile */
+  .sidebar {
+    display: none;
+  }
+/* Show the hamburger icon */
+  .icon {
+    /* display: inline-block; */
+    display: block;
+    color: black;
+    margin-left: 10px;
+  }
+ 
+  .header-title {
+  text-align: center;
+  }
+
+
+  /* Show the mobile menu when the sidebar is hidden */
+  /* #mobile-menu {
+    display: block;
+  } */
+
+    /* Show the mobile menu when the hamburger icon is clicked */
+    .mobile-menu.show {
+      display: block;
+    }
+
+  /* Make dropdown menus full width on mobile */
+  .dropdown-menu {
+    width: 100%;
+    left: 0;
+    right: 0;
+  }
+
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+}
+
+/* CSS for Larger Screens */
+@media screen and (min-width: 769px) {
+  /* Show the sidebar on larger screens */
+  .sidebar {
+    display: flex;
+  }
+
+  /* Hide the mobile menu on larger screens */
+  #mobile-menu {
+    display: none;
+  }
+} 
 

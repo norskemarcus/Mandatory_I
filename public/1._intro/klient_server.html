@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="1._intro/intro.css">
+
+    <title>Klient-server-modellen</title>
+  </head>
+  <body>
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="#" class="icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Klient-server-modellen</h1>
+      <a href="#" class="admin-link">Sign In</a>
+  </header>
+
+   <!--  <header>
+      <a href="/" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+
+   <a href="javascript:void(0);" class="icon" id="mobileMenuIcon">
+    <i class="fa fa-bars"></i>
+  </a>
+
+  <a href="admin-login.html" class="admin-link">Admin Sign In</a>
+  <h1 class="header-title">Klient-server-modellen</h1>
+    </header> -->
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <!-- col-md-9:  width for medium-sized screens and larger, it will take up 9 out of 12 columns in the grid system-->
+       <!-- col-lg-10: lg = large-sized and larger, 10 out of 12 columns -->
+       <!-- ms-sm-auto: adding margin to the right side (ms) and resetting the margin to auto (sm-auto) for small-sized (sm) screens and larger -->
+       <!-- px-md-4: padding both left and right -->
+           <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+            <section class="section-text">
+              <h4>Hvad er klienten og serveren?</h4>
+              <p>
+                  <strong>Klienten:</strong> Klienten er normalt en brugerens enhed, såsom en computer, smartphone eller tablet. Den er ansvarlig for at anmode om ressourcer eller tjenester fra en fjernserver og præsentere resultaterne for brugeren. Når du åbner en webbrowser og besøger en hjemmeside, fungerer din computer som klienten, der anmoder om websidens indhold.
+              </p>
+              <p>
+                  <strong>Serveren:</strong> Serveren er en fjerncomputer, der er designet til at besvare anmodninger fra klienter. Den indeholder og administrerer ressourcer, såsom websider, databaser, billeder og andre filer. Når du besøger en hjemmeside, er serveren den, der leverer hjemmesidens indhold til din klient.
+              </p>
+          </section>
+          
+          <section class="section-text">
+              <h4>Sådan fungerer det:</h4>
+              <ol>
+                  <li>
+                      <p><strong>Anmodning og Svar:</strong> Klienten sender en anmodning til serveren. Denne anmodning kan være en forespørgsel om at hente en webside, gemme data i en database eller udføre andre handlinger.</p>
+                  </li>
+                  <li>
+                      <p><strong>Behandling på Serveren:</strong> Serveren modtager anmodningen, behandler den og trækker de nødvendige ressourcer eller udfører de nødvendige handlinger.</p>
+                  </li>
+                  <li>
+                      <p><strong>Svar til Klienten:</strong> Serveren sender et svar tilbage til klienten. Dette svar kan være HTML til en webside, JSON-data til en API-anmodning eller andre data, afhængigt af anmodningens art.</p>
+                  </li>
+                  <li>
+                      <p><strong>Præsentation på Klienten:</strong> Klienten modtager svaret fra serveren og præsenterer det for brugeren. I tilfældet med en webbrowser renderes HTML'en for at vise den ønskede webside.</p>
+                  </li>
+              </ol>
+          </section>
+          
+          <section class="section-text">
+              <h4>Hvorfor er det vigtigt?</h4>
+              <p>
+                  At forstå klient-server-modellen er afgørende, når du udvikler webapplikationer, fordi det hjælper med at skabe en klar opdeling af ansvar. Din klientkodem skal sørge for brugergrænsefladen og interaktionen, mens serverkoden skal håndtere datahåndtering, databaser og forretningslogik. Dette gør det lettere at skalere og vedligeholde komplekse applikationer.
+              </p>
+          </section>
+    
+          </main>
+       </div>
+    </div>
+
+
+  <script type="module" src="../sidebar.js"></script>
+
+  <script type="module" src="../mobileMenu.js"></script>
+
+
+
+  </body>
+</html>

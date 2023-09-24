@@ -24,6 +24,26 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('public/frontpage.html'));
 });
 
+
+app.get('/klient-server', (req, res) => {
+  res.sendFile(path.resolve('public/1._intro/klient_server.html'));
+});
+
+
+app.get('/variabler', (req, res) => {
+  res.sendFile(path.resolve('public/1._intro/variabler_scope.html'));
+});
+
+
+
+
+app.get('/fetch', (req, res) => {
+  res.sendFile(path.resolve('public/5._asynkront/fetch.html'));
+});
+
+
+
+
 const PORT = 8080;
 app.listen(8080, error => {
   if (error) {
