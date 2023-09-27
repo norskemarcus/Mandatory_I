@@ -7,6 +7,18 @@ const signOutButton = document.getElementById('signOutButton');
 signOutButton.addEventListener('click', handleSignOut);
 
 
+// Event listener to detect when the modal is hidden
+$('#signInModal').on('hidden.bs.modal', function () {
+   document.getElementById('email').value = '';
+   document.getElementById('password').value = '';
+   
+  // Clear the modal message when the modal is hidden
+  const modalMessageDiv = document.getElementById('modalMessageDiv');
+  if (modalMessageDiv) {
+    showMessage('reset', '', 'modalMessageDiv', true); 
+}
+});
+
 
 function handleSignIn() {
   const email = document.getElementById('email').value;
@@ -14,11 +26,13 @@ function handleSignIn() {
 
   // Perform authentication (dummy logic for demonstration)
   if (email === "test1@gmail.com" && password === "test1234") {
+
     showMessage('success', 'Login successful!', 'modalMessageDiv');
     console.log('Login successful!');
     updateStatus('Logged in as: ' + email);
     document.getElementById('signInButton').style.display = 'none'; // Hide Sign In button
     document.getElementById('loggedInStatus').style.display = 'block'; // Show status and Sign Out button
+    
      // Hide the modal after successful login
      $('#signInModal').modal('hide');
   } else {
@@ -27,21 +41,35 @@ function handleSignIn() {
   }
 }
 
-function showMessage(type, message, targetElementId) {
+function showMessage(type, message, targetElementId, reset = false) {
   const messageDiv = document.getElementById(targetElementId);
-  messageDiv.textContent = message;
 
-  if (type === 'success') {
-    messageDiv.style.backgroundColor = '#d4edda';
-    messageDiv.style.borderColor = '#c3e6cb';
-    messageDiv.style.color = '#155724';
-  } else if (type === 'error') {
-    messageDiv.style.backgroundColor = '#f8d7da';
-    messageDiv.style.borderColor = '#f5c6cb';
-    messageDiv.style.color = '#721c24';
+  if (!messageDiv) {
+    console.error(`Element with ID '${targetElementId}' not found.`);
+    return;
   }
 
-  messageDiv.style.display = 'block';
+
+  if (reset) {
+    messageDiv.style.backgroundColor = '';
+    messageDiv.style.borderColor = '';
+    messageDiv.style.color = '';
+    messageDiv.textContent = '';
+  } else {
+    messageDiv.textContent = message;
+
+    if (type === 'success') {
+      messageDiv.style.backgroundColor = '#d4edda';
+      messageDiv.style.borderColor = '#c3e6cb';
+      messageDiv.style.color = '#155724';
+    } else if (type === 'error') {
+      messageDiv.style.backgroundColor = '#f8d7da';
+      messageDiv.style.borderColor = '#f5c6cb';
+      messageDiv.style.color = '#721c24';
+    }
+
+    messageDiv.style.display = 'block';
+  }
 }
 
 
@@ -55,11 +83,18 @@ function updateStatus(statusText) {
 function handleSignOut() {
   // Implement sign-out logic here
   // This is where you would clear the user's session or token
-  // and reset the UI to the signed-out state
-  document.getElementById('signInButton').style.display = 'block'; // Show Sign In button
-  document.getElementById('loggedInStatus').style.display = 'none'; // Hide status and Sign Out button
-  document.getElementById('status').textContent = ''; // Clear the status text
-  showMessage('success', 'Logged out successfully!');
+  document.getElementById('signInButton').style.display = 'block'; 
+  document.getElementById('loggedInStatus').style.display = 'none'; 
+
+ const statusElement = document.getElementById('status');
+  if (statusElement) {
+    showMessage('reset', '', 'status', true);
+  }
+
+  const modalMessageDiv = document.getElementById('modalMessageDiv');
+  if (modalMessageDiv) {
+    showMessage('reset', '', 'modalMessageDiv', true); 
+  }
 }
 
 
