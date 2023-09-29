@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="1._intro/intro.css">
+
+    <title>Datastrukturer</title>
+  </head>
+  
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="/" class="header-icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Datastrukturer</h1>
+    </header>
+
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+
+        <section class="section-text">
+          <p>Datastrukturer bruges til at organisere og opbevare data på en måde, der gør det nemt at tilgå og manipulere. I JavaScript har man Arrays og objekter.</p>
+        </section>
+
+        <section class="section-text">
+          <h3>Arrays</h3>
+          <p>Arrays bruges til at opbevare en samling af værdier i en bestemt rækkefølge:
+          <pre><code>let farver = ['rød', 'grøn', 'blå'];</code></pre>
+        </p>
+        <br>
+
+          <h3>Array metoder</h3>
+          <p>JavaScript leverer flere nyttige metoder til at arbejde med arrays:</p>
+         
+        <p><strong>Push:</strong> Tilføj et element til slutningen af et array.</p>
+        <pre><code>farver.push('orange');</code></pre>
+
+        <p><strong>Pop:</strong> Fjern det sidste element fra et array.</p>
+        <pre><code>let fjernetFarve = farver.pop();</code></pre>
+
+        <p><strong>Shift:</strong> Fjern det første element fra et array.</p>
+        <pre><code>let fjernetFarve = farver.shift();</code></pre>
+
+        <p><strong>Unshift:</strong> Tilføj et eller flere elementer i begyndelsen af et array.</p>
+        <pre><code>farver.unshift('lilla', 'gul');</code></pre>
+
+        <p><strong>Splice:</strong> Tilføj, fjern eller overskriv elementer i et array.</p>
+        <pre><code>
+// Fjern et element ved indeks 1
+farver.splice(1, 1);
+
+// Tilføj 'pink' og 'brun' efter 'grøn'
+farver.splice(farver.indexOf('grøn') + 1, 0, 'pink', 'brun');
+        </code></pre>
+          <br>
+          <h3>Kopiering af arrays</h3>
+          <p>Du kan kopiere et array ved hjælp af spread-operatoren eller <code>slice()</code>-metoden:</p>
+          <pre><code>
+    // Brug spread-operatoren
+    let kopieretArray = [...farver];
+
+    // Brug slice() metoden
+    let kopieretArray = farver.slice();
+          </code></pre>
+      </section>
+
+      <section class="section-text">
+        <h2>Objekter</h2>
+
+        <p>Objekter er en central datastruktur i JavaScript, og de bruges til at organisere og lagre data som nøgle-værdi-par. Et objekt består af en samling af egenskaber, hvor hver egenskab har en nøgle (en streng) og en værdi. Her er et grundlæggende eksempel på, hvordan man opretter et objekt:</p>
+
+        <pre><code>
+    let person = {
+      navn: "John Doe",
+      alder: 30,
+      adresse: "123 Main Street"
+    };
+          
+        </code></pre>
+
+        <p>I dette eksempel er person et objekt med tre <strong>egenskaber</strong>: navn, alder, og adresse, hvor hver egenskab har sin egen <strong>værdi</strong>. Du kan <strong>få adgang til egenskaber</strong> i et objekt ved at bruge punktnotation (.) eller bracket notation ([]).</p> 
+          
+        <p>Her er nogle eksempler:</p>
+
+        <pre><code>
+    console.log(person.navn); // Udskriver "John Doe"
+    console.log(person["alder"]); // Udskriver 30
+        </code></pre>
+
+        <p>Man kan <strong>ændre værdien</strong> af en egenskab i et objekt, ved at tildele en ny værdi til den på denne måde:</p>
+
+        <pre><code>
+    person.alder = 35;
+    console.log(person.alder); // Udskriver nu 35
+          
+        </code></pre>
+      
+      <p>Du kan <strong>tilføje nye egenskaber</strong> til et objekt ved blot at tildele en værdi til en ny nøgle:</p>
+
+      <pre><code>
+    person.email = "john@example.com";
+    console.log(person.email); // Udskriver "john@example.com"
+      </code></pre>
+      
+       <p>Du kan <strong>slette en egenskab</strong> fra et objekt ved hjælp af delete-operatoren:</p>
+
+       <pre><code>
+    delete person.adresse;
+    console.log(person.adresse); // Udskriver "undefined"
+        </code></pre>
+
+        <p>Du kan <strong>iterere over alle egenskaberne</strong> i et objekt ved hjælp af en for...in-løkke:</p>
+
+        <pre><code>
+    for (let key in person) {
+      console.log(key + ": " + person[key]);
+    }
+    // Dette vil udskrive alle nøgle-værdi-par i objektet.
+          </code></pre>
+      </section>
+
+     
+
+
+  </main>
+  <script type="module" src="../sidebar.js"></script>
+  <script type="module" src="../mobileMenu.js"></script>
+</div>
+</div>
+
+  </body>
+</html>

@@ -39,13 +39,14 @@ function escapeHTML(string) {
               JavaScript 
             </a>
             <ul class="dropdown-menu" aria-labelledby="section2Dropdown">
-              <li><a class="dropdown-item" href="/konkatinering-og-type-coercion">Konkatinering og Type Coercion</a></li>
               <li><a class="dropdown-item" href="/funktioner">Funktioner</a></li>
-              <li><a class="dropdown-item" href="/callback-funktioner">Callback funktioner</a></li>
-              <li><a class="dropdown-item" href="/call-stack-og-hoisting">Call Stack og Hoisting</a></li>
+              <li><a class="dropdown-item" href="/callback-arrow">Arrow og callback-funktioner</a></li>
               <li><a class="dropdown-item" href="/clean-code">Clean Code</a></li>
               <li><a class="dropdown-item" href="/kode-konventioner">Kode konventioner</a></li>
-              <li><a class="dropdown-item" href="/eslint">ESLint</a></li>
+              <li><a class="dropdown-item" href="/fetch">Fetch</a></li>
+              <li><a class="dropdown-item" href="/async-await">Async/Await</a></li>
+              <li><a class="dropdown-item" href="/event-loop">Event Loop</a></li>
+              <li><a class="dropdown-item" href="/callbacks-vs-promises-vs-async-await">Callbacks vs. Promises vs. Async/Await</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -79,15 +80,9 @@ function escapeHTML(string) {
               <li><a class="dropdown-item" href="/gitignore">Gitignore</a></li>
             </ul>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="section5Dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Asynkront js
-            </a>
+         
             <ul class="dropdown-menu" aria-labelledby="section5Dropdown">
-              <li><a class="dropdown-item" href="/fetch">Fetch</a></li>
-              <li><a class="dropdown-item" href="/async-await">Async/Await</a></li>
-              <li><a class="dropdown-item" href="/event-loop">Event Loop</a></li>
-              <li><a class="dropdown-item" href="/callbacks-vs-promises-vs-async-await">Callbacks vs. Promises vs. Async/Await</a></li>
+            
             </ul>
           </li>
           <li class="nav-item dropdown">

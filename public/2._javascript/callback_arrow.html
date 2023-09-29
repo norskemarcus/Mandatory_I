@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="2._javascript/javascript.css">
+
+    <title>Arrow og callback-funktioner</title>
+  </head>
+  
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="/" class="header-icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Callback- og arrow-funktioner</h1>
+    </header>
+
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+
+     
+        <section class="section-text">
+
+          <h2>Arrow funktioner</h2>
+          <p>
+            <strong>Arrow-funktioner</strong> er en kompakt og elegant måde at definere funktioner på i JavaScript. De blev introduceret i ECMAScript 6 (ES6) og er især nyttige til kortere funktioner og callback-funktioner. Arrow-funktioner adskiller sig fra traditionelle funktioner ved at bruge en kortere syntaks og ved at binde deres eget 'this' til det omsluttende scope.
+          </p>
+      
+          <p>
+            Her er et eksempel på en arrow-funktion:
+          </p>
+      
+          <pre><code>     
+      const addArrow = (a, b) => a + b;
+      
+      console.log(addArrow(3, 5)); // Resultat: 8
+          </code></pre>
+      
+          <p>
+            Bemærk den korte syntaks og fraværet af nøgleordet 'function'. Arrow-funktioner returnerer automatisk resultatet, når der ikke er brugt krøllede parenteser.
+          </p>
+      
+          <p>
+            En anden vigtig egenskab ved arrow-funktioner er, at de bevarer det omsluttende scopes 'this'. Dette gør dem velegnede til brug som callback-funktioner og i kontekster, hvor du ønsker at undgå 'this'-problemer.
+          </p>
+      
+          <pre><code>
+      const person = {
+        name: "Alice",
+        sayHello: function() {
+          setTimeout(function() {
+            console.log("Hej, jeg er " + this.name); 
+            // Vil give fejl, 'this' er ikke person-objektet
+          }, 1000);
+        },
+        sayHi: function() {
+          setTimeout(() => {
+            console.log("Hej, jeg er " + this.name); 
+            // Arrow-funktion bevarer 'this' fra det omsluttende scope
+          }, 1000);
+        }
+      };
+      
+      person.sayHello(); // Vil give fejl
+      person.sayHi(); // Vil logge "Hej, jeg er Alice" efter 1 sekund
+          </code></pre>
+      
+          <p>
+            Arrow-funktioner er en nyttig tilføjelse til JavaScript og kan gøre din kode mere læselig og vedligeholdelig, især når du arbejder med kortere funktioner og callbacks.
+          </p>
+        </section>
+
+
+      <section class="section-text">
+        <h2>Callback-funktioner</h2>
+          <p>
+            <strong>Callback-funktioner</strong> er en kraftfuld del af JavaScript, der giver dig mulighed for at definere en funktion separat og derefter overføre den som en reference til en anden funktion som et argument. Dette gør det muligt at genbruge og opdele din kode i mindre, mere forståelige stykker. 
+          </p>    
+            <p>Callback-funktioner bruges ofte i asynkron programmering, hvor operationer ikke venter på resultater med det samme, men i stedet udføres i baggrunden. Når resultatet er klar, kaldes callback-funktionen.
+          </p>
+      
+          <p>
+            Her er et grundlæggende eksempel på brugen af callback-funktioner:
+          </p>
+      
+          <pre><code>
+      function genericActionPerformer(genericAction, name) {
+        return genericAction(name);
+      }
+      
+      // Arrow-funktion!
+      const jump = (name) => `${name} is jumping`;
+
+      // "Lasse is jumping"
+      // jump bruges som en callback-funktion!
+      console.log(genericActionPerformer(jump, "Lasse"));
+          </code></pre>
+      
+          <p>
+            Du kan også lave det samme på én linje:
+          </p>
+      
+          <pre><code>
+      console.log(genericActionPerformer((name) => `${name} is sleeping`, "Daniel"));
+          </code></pre>
+      
+          <p>
+            Callback-funktioner giver stor fleksibilitet og kan bruges i forskellige sammenhænge, såsom event-håndtering og asynkron kommunikation med servere.
+          </p>
+          <section style="margin-bottom: 100px;">
+    
+
+        
+  <button id="scrollToTopButton">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+       
+  </main>
+  <script type="module" src="../sidebar.js"></script>
+  <script type="module" src="../mobileMenu.js"></script>
+  <script type="module" src="../2._javascript/funktioner.js"></script>
+</div>
+</div>
+
+  </body>
+</html>

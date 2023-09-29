@@ -5,6 +5,14 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Mindst 100% af viewportens højde */
+  margin: 0;
+}
+
+
 header {
   background-color: #0bb66f;
   color: white;
@@ -30,17 +38,10 @@ header {
 .container {
   display: flex;
   justify-content: space-between; /* Add this to separate the sidebar and main content */
+  flex-direction: column; /* Add this line to make it a vertical flex container */
+  min-height: 100vh; /* Ensure the container fills the viewport height */
 }
 
-/* Custom styles for the sidebar */
-/* .sidebar {
-  background-color: grey;
-  color: white;
-  padding: 5%;
-  display: flex;
-  flex-direction: column;
-  
-} */
 
 #sidebar-placeholder {
   width: 0;
@@ -80,9 +81,8 @@ header {
 }
 
 /* Main content styles */
-main {
-  flex: 1;
-  padding: 20px;
+#mainContainer {
+  flex-grow: 1;  /* Gør hovedindholdet fleksibelt og udfyld tilgængelig plads */
 }
 
 
@@ -91,6 +91,10 @@ main {
   display: none;
 }
 
+.infoboks h2 {
+  margin-top: 20px; 
+  margin-bottom: 20px;
+}
 
 /* CSS styles for the mobile menu */
 .mobile-menu {
@@ -124,61 +128,36 @@ main {
   display: none; 
 }
 
-/* 
-
-.modal {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-
-.modal-dialog {
-  position: relative;
-  margin: auto;
-  max-width: 500px;
-  background-color: #fff;
+footer {
+  background-color: #333; 
+  color: #fff; 
   padding: 20px;
-  border-radius: 5px;
-}
+ }
 
-
-.modal-header {
+ .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #ccc;
 }
 
-
-.close {
-  background: none;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+.footer-section {
+  margin: 0;
 }
 
-
-.modal-body {
-  padding: 20px;
+.footer-section a {
+  color: #fff; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
-
-.modal-footer {
-  padding-top: 10px;
-  text-align: right;
+.footer-section a:hover {
+  color: #097e54; 
 }
+ 
 
-.openModalButton{
-  background-color: "#0bb66f";
-  color: black
-}
- */
+
+
+
 
 
 /* CSS for Mobile Screens */

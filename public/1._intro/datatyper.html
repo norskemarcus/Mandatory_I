@@ -1,16 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Datatyper</title>
-  <link rel="stylesheet" href="../style.css"/>
-</head>
-<body>
-  <header class="d-flex justify-content-between align-items-center">
-    <a href="#" class="icon"><i class="fa fa-home"></i></a>
-    <h1 class="header-title"Datatyper</h1>
-   
-  </header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="1._intro/intro.css">
+
+    <title>Datatyper</title>
+  </head>
+  <body>
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="/" class="header-icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Datatyper</h1>
+    </header>
+
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+
+        <section class="section-text">
+          <h2>Dynamiske datatyper</h2>
+          <p>
+            JavaScript betragtes ofte som et dynamisk programmeringssprog med dynamiske datatyper. Dette betyder, at variabler i JavaScript ikke er direkte knyttet til en bestemt datatypisk værdi, i modsætning til nogle andre programmeringssprog som f.eks. Java. I JavaScript kan en variabel derfor tildeles (og gen-tildeles) værdier af forskellige datatyper.
+
+            For at illustrere dette, lad os tage et eksempel:
+            <pre>
+              <code>
+    let resultat = 10; // resultat er nu et heltal (number)
+    resultat = "JavaScript"; // resultat er nu en streng (string)
+    resultat = true; // resultat er nu en boolsk værdi (boolean)
+              </code>
+            </pre>
+          </p>
+
+          <p>
+            JavaScript er også kendt som et "svagt typet sprog" (weakly typed), hvilket betyder, at det tillader <i>implicit typekonvertering</i>, når en operation involverer forskellige datatyper, i stedet for at kaste fejl.
+          </p>
+
+          <p>
+            For eksempel:
+          </p>
+          <pre>
+            <code>
+    let nummer = 42; // nummer er et tal (number)
+    let tekst = "10"; // tekst er en streng (string)
+    
+    // JavaScript udfører implicit typekonvertering
+    let resultat = nummer + tekst; // resultat bliver "4210" (en streng)
+    
+    console.log(resultat); // Udskriver "4210"
+            </code>
+          </pre>
+        </p>
+        <p>
+          I dette eksempel bliver tallet "nummer" implicit konverteret til en streng for at muliggøre konkatenering med en anden streng. Dette er en form for svag typning, hvor JavaScript forsøger at tilpasse datatyperne for at udføre operationen.
+
+Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uventet adfærd, hvis det ikke håndteres korrekt i koden. Det er en god praksis at være eksplicit med typekonverteringer, når det er nødvendigt for at undgå fejl.</p>
+
+  <p>
+  I eksempelet nedenunder ser man et eksempel på en typekonvertering som går galt:
+  </p>
+
+     <pre><code>
+        a = true + 2
+        console.log(a);
+        // a bliver automatisk konverteret til 1, så svaret er 3 
+      </code></pre>
+    
+        </section>
+
+       
+        <section class="section-text">
+              
+          <h2>Primitive datatyper</h2>
+      
+          <p>JavaScript har flere primitive datatyper, der repræsenterer enkeltstående værdier. Disse datatyper inkluderer:</p>
+      
+          <ul>
+              <li><strong>Number:</strong> Bruges til at repræsentere numeriske værdier: <code>let num = 42;</code></li>
+
+              <li><strong>String:</strong> Bruges til at repræsentere tekststreng: <code>let tekst = 'Hej, verden!';</code></li>
+
+              <li><strong>Boolean:</strong> Bruges til at repræsentere sandt eller falsk: <code>let erSandt = true;</code></li>
+
+              <li><strong>Null:</strong> Bruges til at repræsentere en bevidst tomt eller ikke-eksisterende værdi:<code>let ingenting = null;</code></li>
+
+              <li><strong>Undefined:</strong> Bruges til at repræsentere en variabel, der ikke er blevet tildelt en værdi: <code>let ukendt;</code></li>
+
+              <li><strong>BigInt:</strong> Bruges til at repræsentere store heltal, uden præcisionstab: <code>let bigInt = 1234567890123456789012345678901234567890n;</code></li>
+
+              <li><strong>Symboler:</strong> Bruges til at repræsentere unikke værdier i JavaScript. Hvert symbol er garanteret at være unikt, hvilket gør dem nyttige til at oprette skjulte eller private egenskaber på objekter.: 
+               </li>
+          </ul>
+              <pre>
+                <code>
+      const ukendt = Symbol('Dette er et unikt symbol');
+      let obj = {};
+      obj[ukendt] = 'Dette er en skjult værdi';
+      console.log(obj[ukendt]);
+              </code>
+                </pre>
+              
+        </section>
+
+        <section class="section-text">      
+          <h2>Objekter</h2>
+      
+          <p>Ud over primitive datatyper har JavaScript også objekter, der kan bruges til at organisere og opbevare data. Objekter er samlinger af nøgle-værdi-par (key value). Eksempel:</p>
+      
+          <pre>
+          <code>
+          let person = {
+            navn: 'John Doe',
+            alder: 30,
+            erGift: false
+           };
+          </code>
+          </pre>
+      
+          <p>I dette eksempel er 'person' et objekt med tre nøgle-værdi-par, der indeholder oplysninger om en person.</p>
+        </section>
+
+      
+     
+          <section class="section-text">
+            <h2><i>typeof</i> og ===</h2>
+
+            <p>Hvis du er i tvivl om hvilken datatype en variabel er, så kan man bruge typeof operator:</p>
+            <pre><code>
+      let nummer = 42;
+      console.log(typeof nummer); // Udskriver "number"
+
+      let person = { navn: "John", alder: 30 };
+      console.log(typeof person); // Udskriver "object"
+            </code></pre>
+            </p>
+
+              <p>
+              I forbindelse med hvilken datatype en variabel er, er det også vigtigt at være opmærksom på forskellen mellem brugen af doble ("==") og triple "===".
+
+              I eksempelet nedenunder bruger vi dobbelt lig med (==) til at sammenligne tallet 1 med strengen "1". Med dobbelt lig sker der en typekonvertering, så tallet 1 og strengen "1" betragtes som ens, og udtrykket evalueres til sandt. 
+            </p>
+
+              <pre>
+                <code>
+      1 == "1"; // true
+      1 === "1"; // false
+              </code></pre>
+              <p>
+              Med trippel lig (===) sammenlignes værdierne <strong>uden typekonvertering</strong>. Da tallet 1 og strengen "1" er af forskellige typer, evalueres udtrykket til falsk. Dette er værdt at mærke sig, da man kan undgå gremme bugs, ved at alltid bruge trippel lig ("===").
+            </p>
+            <p>
+              Hvis du ønsker at læse mere om dette, tryk <a href="https://xiaoyunyang.medium.com/javascript-is-a-loosely-typed-language-meaning-you-dont-have-to-specify-what-type-of-information-137408d54fc7">her</a>.
+            </p>
+
+
+          </section>
+     
+         
+
+
+  <script type="module" src="../sidebar.js"></script>
+
+  <script type="module" src="../mobileMenu.js"></script>
+
+
+  </body>
 </html>

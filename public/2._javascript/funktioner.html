@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- FontAwesome library  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"/>
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+
+    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="2._javascript/javascript.css">
+
+    <title>Funktioner</title>
+  </head>
+  
+
+    <header class="d-flex justify-content-between align-items-center">
+      <a href="/" class="header-icon"><i class="fa fa-home"></i></a>
+      <h1 class="header-title">Funktioner</h1>
+    </header>
+
+
+    <div class="container-fluid">
+      <div class="row">
+       <div id="sidebar-placeholder"></div>
+      
+       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 mt-3">
+
+     
+      <section class="section-text">
+          <h2>Hvad er funktioner i JavaScript?</h2>
+          <p>
+            Funktioner er et grundlæggende koncept i JavaScript og er vigtige af flere grunde:
+          </p>
+           <ul class=list-style-type-none>
+            <li>
+              <strong>Genbrug af kode: </strong>Funktioner giver dig mulighed for at definere en bestemt opgave eller handling, som kan udføres flere gange i din kode. Dette fremmer genbrug og vedligeholdelse af kode.
+            </li>
+            <li><strong>Abstraktion: </strong>Ved at opdele komplekse opgaver i mindre funktioner kan du abstrahere detaljerne og gøre din kode mere læselig og forståelig.
+            </li>
+            <li><strong>Modularitet: </strong>Funktioner muliggør opdeling af din kode i mindre, håndterbare moduler, hvilket gør det nemmere at organisere og samarbejde i teams.</li>
+            <li><strong>Fejlfinding: </strong>Funktioner gør det lettere at isolere og identificere fejl i din kode, da hver funktion udfører en specifik opgave.</li>
+           </ul> 
+           <br>     
+           <p>Lad os nu se på nogle af de centrale aspekter af funktioner i JavaScript:</p>
+        </section>
+      
+        <section>
+          <h2>Funktionsdeklaration vs. funktionsudtryk</h2>
+          <p><strong>Funktionsdeklaration:</strong></p>
+          <p>
+            En funktionsdeklaration bruger nøgleordet <strong>function</strong> til at definere en funktion og tildele den et navn. Funktionen kan derefter kaldes, når som helst i koden, da den er blevet "hoistet" til toppen af sit scope. 
+          </p>
+          <p>
+            <strong>Hoisting</strong> kan forstås som at det ”bobbler op” , det vil sige at variablen og funktionen ”løftes” til toppen af deres omgivende scope. Derfor vil man kunne deklarere en funktion nedenunder en console.log , fordi de havner i samme callstack. Koden er dog ikke så læsbar, særlig hvis funktionen indeholder en større mængde logik. Da vil det være god kodepraksis og placere funktionen over det sted, hvor den kaldes.
+          </p>
+          <pre><code>
+            console.log(sum(2,2));
+
+            function sum(a, b) {
+              return a + b;
+            }
+          </code></pre>
+      
+          <p><strong>Funktionsudtryk:</strong></p>
+
+          <p>
+            En funktionsudtryk opretter en anonym funktion og tildeler den til en variabel. Funktionen kan kun kaldes, efter variablen er blevet tildelt.
+          </p>
+          <pre><code>const sum = function(a, b) {
+        return a + b;
+      };</code></pre>
+      
+          <p>
+            Forskellen ligger i, hvordan de håndteres under hoisting og tilgængelighed
+            i forskellige dele af koden.
+          </p>
+        </section>
+      
+        <section class="section-text">
+          <h2>Argumenter og parametre</h2>
+          <p>
+            <strong>Parametre</strong> er variabler, der fungerer som input til en funktion.
+          </p>
+          <pre><code>
+    function sum(a, b) {
+
+    return a + b;
+    }
+          </code></pre>
+      
+          <p>
+            <strong>Argumenter</strong> er de faktiske værdier, der sendes til funktionen,
+            når den kaldes.
+          </p>
+          <pre><code>
+    const resultat = sum(2, 3);
+          </code></pre>
+        </section>
+      
+        <section class="section-text">
+          <h2>Returneringsværdier</h2>
+          <p>
+            Funktioner i JavaScript kan returnere værdier ved hjælp af <code>return</code>-nøgleordet.
+          </p>
+          <pre><code>
+    function sum(a, b) {
+      return a + b;
+    }
+
+    const resultat = sum(2, 3); 
+    // resultat vil være 5
+          </code></pre>
+        </section>
+      
+        <section class="section-text">
+          <h2>Anonyme funktioner</h2>
+          <p>
+            Anonyme funktioner er funktioner uden navn og bruges ofte som argumenter til
+            andre funktioner som callback-funktioner.
+          </p>
+          <pre><code>
+    setTimeout(function() {
+      console.log('Dette er en anonym funktion');
+    }, 1000);
+          </code></pre>
+      <section style="margin-bottom: 100px;">
+
+        
+  <button id="scrollToTopButton">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+  
+       
+  </main>
+  <script type="module" src="../sidebar.js"></script>
+  <script type="module" src="../mobileMenu.js"></script>
+  <script type="module" src="../2._javascript/funktioner.js"></script>
+</div>
+</div>
+
+  </body>
+</html>

@@ -35,6 +35,24 @@ app.get('/variabler', (req, res) => {
 });
 
 
+app.get('/datatyper', (req, res) => {
+  res.sendFile(path.resolve('public/1._intro/datatyper.html'));
+});
+
+app.get('/datastrukturer', (req, res) => {
+  res.sendFile(path.resolve('public/1._intro/datastrukturer.html'));
+});
+
+app.get('/funktioner', (req, res) => {
+  res.sendFile(path.resolve('public/2._javascript/funktioner.html'));
+});
+
+app.get('/callback-arrow', (req, res) => {
+  res.sendFile(path.resolve('public/2._javascript/callback_arrow.html'));
+});
+
+
+
 
 
 app.get('/fetch', (req, res) => {

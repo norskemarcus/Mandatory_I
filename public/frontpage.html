@@ -102,12 +102,12 @@
     <!-- Mobile menu content will be generated dynamically -->
   </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" id="mainContainer">
       <div class="row">
        <div id="sidebar-placeholder"></div>
       
            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-            <div class="infoboks">
+            <div class="infoboks mb-5">
               <h2>Velkommen til Dokumentationswebsitet!</h2>
               <p>
                   Dette website er en del af skoleopgaven i valgfaget "Fullstack Node.js" på KEA - Københavns Erhvervsakademi.
@@ -116,14 +116,22 @@
                   Tak fordi du kigger forbi, og jeg håber, at du finder websitet nyttigt!
               </p>
           </div>
-
-    
-  `;
-
-    
           </main>
+
+        
        </div>
     </div>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-section project-info">
+          <p>Dette websted er en del af et skoleprojekt ved KEA, datamatikerprogrammet.</p>
+        </div>
+        <div class="footer-section kea-link">
+          <a href="https://kea.dk/uddannelser/erhvervsakademi/datamatiker" target="_blank">Læs mere om Datamatiker på KEA</a>
+        </div>
+      </div>
+    </footer>
 
     <script type="module" src="./sidebar.js"></script>
 
