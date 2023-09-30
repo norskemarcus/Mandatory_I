@@ -80,6 +80,37 @@ header {
   margin-left: 5px;
 }
 
+
+/* Custom modal styles */
+.custom-modal .modal-header {
+  background-color: #649544;
+  color: black; 
+}
+
+.custom-modal .modal-body {
+  background-color: #f8f9fa; 
+  color: #333; 
+}
+
+.custom-modal .modal-footer {
+  background-color: #f8f9fa; 
+  color: #333; 
+}
+
+/* Override Bootstrap's modal backdrop color */
+.modal-backdrop {
+  background-color: #649544;
+ /*  rgba(0, 0, 0, 0.5);  Change to your desired backdrop color */
+}
+
+/* Change button color on hover */
+.custom-modal .modal-footer #signInModalButton:hover {
+  background-color: #649544; /* Change the background color on hover */
+  color: white; /* Change the text color on hover */
+  border-color: #649544; /* Change the border color on hover */
+}
+
+
 /* Main content styles */
 #mainContainer {
   flex-grow: 1;  /* Gør hovedindholdet fleksibelt og udfyld tilgængelig plads */

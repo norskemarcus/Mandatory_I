@@ -61,34 +61,33 @@
 
  
 <!-- Modal for Sign In -->
-<div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
-  <div class="modal-dialog bg-light-subtle">
+<div class="modal fade custom-modal" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
       <div class="modal-content">
-          <div class="modal-header bg-success">
+          <div class="modal-header">
               <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
               <button type="button" class="btn-close" aria-label="Close"></button>
              
           </div>
-          <div class="modal-body bg-body-tertiary">
+          <div class="modal-body">
            
               <form id="signInForm">
                 
                   <div class="mb-3">
-                      <label for="email" class="form-label font-monospace text-success">Email</label>
+                      <label for="email" class="form-label font-monospace">Email</label>
                       <input type="email" class="form-control" id="email" name="email" placeholder="test1@gmail.com">
                   </div>
                   <div class="mb-3">
-                      <label for="password" class="form-label font-monospace text-success">Password</label>
+                      <label for="password" class="form-label font-monospace">Password</label>
                       <input type="password" class="form-control" id="password" name="password" placeholder="test1234">
                   </div>
               </form>
          
     <div id="modalMessageDiv"></div>
           </div>
-          <div class="modal-footer">
+          <div class="modal-footer">              
+              <button type="button" class="btn btn-outline-dark font-monospace text-black" id="signInModalButton">Sign In</button>
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-               
-              <button type="button" class="btn btn-outline-success font-monospace text-success" id="signInModalButton">Sign In</button>
           </div>
       </div>
   </div>
