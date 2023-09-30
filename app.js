@@ -7,16 +7,6 @@ const app = express();
 app.use(express.static('public'));
 
 
-//import hljs from 'highlight.js/lib/core'; // Core library
-//import javascript from 'highlight.js/lib/languages/javascript'; // Example language
-
-//import 'highlight.js/styles/default.css'; // Example style, choose a different style if you prefer
-
-// Register the language(s) you want to use
-//hljs.registerLanguage('javascript', javascript);
-//hljs.registerLanguage('css', css);
-//hljs.registerLanguage('html', html);
-
 import path from 'path'; // eksistererer internt i node, men pga effektivitet skal man importere det
 // kan ikke længere bruge dette: console.log(__dirname); // les fejlbesked
 
@@ -52,13 +42,24 @@ app.get('/callback-arrow', (req, res) => {
 });
 
 
-
-
-
 app.get('/fetch', (req, res) => {
-  res.sendFile(path.resolve('public/5._asynkront/fetch.html'));
+  res.sendFile(path.resolve('public/2._javascript/fetch.html'));
 });
 
+
+app.get('/node', (req, res) => {
+  res.sendFile(path.resolve('public/3._node/node.html'));
+});
+
+// mere her
+
+app.get('/express', (req, res) => {
+  res.sendFile(path.resolve('public/4._express/express.html'));
+});
+
+app.get('/installere-express', (req, res) => {
+  res.sendFile(path.resolve('public/4._express/express_projekt.html'));
+});
 
 
 

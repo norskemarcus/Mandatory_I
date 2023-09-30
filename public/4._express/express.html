@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="../2._javascript/javascript.css"/>
+
+
+  <title>Express</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1 class="header-title">Express</h1>
+    </header>
+
+     <!-- Include the sidebar using JavaScript -->
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-placeholder">
+        </div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+ 
+      <h2 style="margin-top: 30px" >Introduktion</h2>
+
+      <section class="section-text">
+        <p>Express er kort sagt et minimalistisk web framework til Node.js. Express bygger på Node.js's funktionalitet og tilføjer et lag af abstraktion, der gør det lettere at blandt andet håndtere routes.</p>
+
+        <h3>Håndtering af routes</h3>
+        <p>En af de vigtigste funktioner i Express.js er dens evne til at håndtere URL-routes. Dette gør det muligt at definere, hvordan din applikation skal reagere på forskellige webadresser/endpoints som klienten anmoder. Du kan oprette routes for at besvare HTTP-requests som GET, POST og PUT, og du kan definere, hvordan data skal sendes og modtages.
+        </p>
+
+        <h3>GET request</h3>
+
+        <p>
+          For at foretage en GET-request (request kan oversettes til en anmodning), bruger du ’app.get’ med en endpoint-sti, f.eks. ("/api/users"). Inden i parenteserne finder man  request og respons-objekter som Express tilbyder for at håndtere indkommende anmodninger (request) og sende en respons tilbage til klienten. Dette er de grundlæggende byggestenene i at skabe dynamiske sider og API'er. Der benyttes også en arrow function, som definerer callback funktionen, der skal udføres (executed), når der foretages en anmodning til den angivne sti.
+        </p>
+        <p>Dette eksempel viser, hvordan du opretter en GET-rute i Express for at hente data.</p>
+
+        <pre>
+          <code class="responsive-snippet">
+    app.get('/api/users', (req, res) => {
+      try {
+        // Simulerer hentning af brugerdata fra en database
+        const users = [
+          { id: 1, name: 'John' },
+          { id: 2, name: 'Jane' }
+        ];
+    
+        // Sender brugerdata som JSON-respons med statuskode 200 (OK)
+        res.status(200).send(users);
+      } catch (error) {
+        // Evt fejl - statuskode 500 (Internal Server Error)
+        res.status(500).send('Der opstod en fejl under hentning af brugerdata.');
+      }
+    });
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>POST request</h3>
+        <p>En POST request bruger man til at oprette nye data:</p>
+
+        <pre>
+         <code class="responsive-snippet">
+    app.post('/api/users', (req, res) => {
+      try {
+        // Modtag data fra anmodningen
+        const newUser = req.body;
+    
+        // Gem den nye bruger i en database eller datastruktur
+    
+        // Sender en bekræftelsesbesked som JSON-respons med statuskode 201 (Created)
+        res.status(201).send({ message: 'Bruger oprettet', user: newUser });
+      } catch (error) {
+        // Håndter eventuelle fejl og send en fejlmeddelelse med statuskode 500 (Internal Server Error)
+        res.status(500).send('Der opstod en fejl under oprettelse af bruger.');
+      }
+    });
+          </code>
+        </pre>
+      </section>
+
+      <section>
+        <h3>PUT request</h3>
+
+        <p>En PUT request redigerer hele objektet ud fra id.</p>
+
+        <p>Man kan tilsvarende lave et <strong>PATCH request</strong>, hvis man kun ønsker at redigere deler af objektet, eller få parametre. Dette kan være aktuelt, hvis det er tale om meget store objekter, hvor man kun skal opdatere en lille del.</p>
+
+        <pre>
+          <code class="responsive-snippet">
+    app.put('/api/users/:id', (req, res) => {
+      try {
+        // Modtag brugerens ID fra anmodningen
+        const userId = req.params.id;
+    
+        // Modtag opdaterede oplysninger fra anmodningen
+        const updatedUserInfo = req.body;
+    
+        // Opdater brugerdata i databasen eller datastrukturen baseret på ID
+    
+        // Sender en bekræftelsesbesked som JSON-respons med statuskode 200 (OK)
+        res.status(200).json({ message: 'Bruger opdateret', userId, updatedInfo: updatedUserInfo });
+      } catch (error) {
+        // Håndter eventuelle fejl og send en fejlmeddelelse med statuskode 500 (Internal Server Error)
+        res.status(500).send('Der opstod en fejl under opdatering af bruger.');
+      }
+    });
+          </code>
+        </pre>
+
+      
+      </section>
+
+      <section>
+        <h3>DELETE request</h3>
+        <p>En DELETE request sletter data ud fra id eller et brugernavn osv.</p>
+ 
+        <pre>
+          <code class="responsive-snippet">
+    app.delete('/api/users/:id', (req, res) => {
+      try {
+        // Modtag brugerens ID fra anmodningen
+        const userId = req.params.id;
+    
+        // Slet brugerdata fra databasen eller datastrukturen baseret på ID
+    
+        // Sender en bekræftelsesbesked som JSON-respons med statuskode 204 (No Content)
+        res.status(204).send();
+      } catch (error) {
+        // Håndter eventuelle fejl og send en fejlmeddelelse med statuskode 500 (Internal Server Error)
+        res.status(500).send('Der opstod en fejl under sletning af bruger.');
+      }
+    });
+
+          </code>
+        </pre>
+      </section>
+
+
+      <section class="bottom-section">
+        
+       
+    
+        </section>
+    
+        <button id="scrollToTopButton">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        
+          </main>
+       </div>
+      </div>
+    
+   
+    <script type="module" src="./sidebar.js"></script>
+    <script type="module" src="../2._javascript/funktioner.js"></script>
+    
+
+  </body>
+</html>

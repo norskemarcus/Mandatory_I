@@ -41,12 +41,12 @@ function escapeHTML(string) {
             <ul class="dropdown-menu" aria-labelledby="section2Dropdown">
               <li><a class="dropdown-item" href="/funktioner">Funktioner</a></li>
               <li><a class="dropdown-item" href="/callback-arrow">Arrow og callback-funktioner</a></li>
-              <li><a class="dropdown-item" href="/clean-code">Clean Code</a></li>
-              <li><a class="dropdown-item" href="/kode-konventioner">Kode konventioner</a></li>
               <li><a class="dropdown-item" href="/fetch">Fetch</a></li>
               <li><a class="dropdown-item" href="/async-await">Async/Await</a></li>
               <li><a class="dropdown-item" href="/event-loop">Event Loop</a></li>
               <li><a class="dropdown-item" href="/callbacks-vs-promises-vs-async-await">Callbacks vs. Promises vs. Async/Await</a></li>
+              <li><a class="dropdown-item" href="/clean-code">Clean Code</a></li>
+              <li><a class="dropdown-item" href="/kode-konventioner">Kode konventioner</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -54,7 +54,7 @@ function escapeHTML(string) {
               Node.js
             </a>
             <ul class="dropdown-menu" aria-labelledby="section3Dropdown">
-              <li><a class="dropdown-item" href="/introduktion-til-node-js">Introduktion til Node.js</a></li>
+              <li><a class="dropdown-item" href="/node">Intro til Node.js</a></li>
               <li><a class="dropdown-item" href="/bruge-node-js">Bruge Node.js</a></li>
               <li><a class="dropdown-item" href="/nodemon">Nodemon</a></li>
               <li><a class="dropdown-item" href="/package-managers-npm">Package Managers (npm)</a></li>
@@ -69,13 +69,10 @@ function escapeHTML(string) {
               Express
             </a>
             <ul class="dropdown-menu" aria-labelledby="section4Dropdown">
-              <li><a class="dropdown-item" href="/intro-til-express-js">Intro til Express.js</a></li>
+              <li><a class="dropdown-item" href="/express">Express.js</a></li>
               <li><a class="dropdown-item" href="/installere-express">Installere Express</a></li>
               <li><a class="dropdown-item" href="/lave-en-express-app">Lave en Express App</a></li>
-              <li><a class="dropdown-item" href="/routing">Routing</a></li>
               <li><a class="dropdown-item" href="/middleware">Middleware</a></li>
-              <li><a class="dropdown-item" href="/rest-api-design">REST API Design</a></li>
-              <li><a class="dropdown-item" href="/request-og-response-objects">Request og Response Objects</a></li>
               <li><a class="dropdown-item" href="/semantic-versioning">Semantic Versioning</a></li>
               <li><a class="dropdown-item" href="/gitignore">Gitignore</a></li>
             </ul>

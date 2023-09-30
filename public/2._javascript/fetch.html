@@ -29,10 +29,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 />
 
 <link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="../2._javascript/javascript.css"/>
 
-
-
-    <title>Fetch</title>
+  <title>Fetch</title>
   </head>
   <body>
     <header>
@@ -49,10 +48,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         </div>
 
         <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-       
-      
-    
+ 
+      <h2 style="margin-top: 30px" >Hente data fra en ekstern API</h2>
 
+      <section class="section-text">
+      <p>At fetche data kan forstås som at hente data, men man kan også udføre andre operationer, som at opdatere, lægge til eller slette data.</p>
+
+      <p>Vi tager udgangspunkt i et eksempel der vi henter en tilfældig pokemon ud fra id, fra et eksternt API (random funktionen ses ikke her). Hvis det ikke står andet er det en GET-request, som denne her:
+      </p>
+    
             <pre>
             <code> 
   fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemonId}/`)
@@ -73,13 +77,86 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
 
             </code>
           </pre>
+      </section>
+
+      <section class="section-text">
+        <p><strong>.then(response => response.json()):</strong> Her kædes en promise-metode, .then(), til resultatet af fetch-anmodningen. Når anmodningen er afsluttet, indeholder response objektet information om anmodningens resultat, f.eks. statuskoden og headers. response.json() er en asynkron funktion, der bruges til at læse og returnere JSON-data fra svaret. Dette er nødvendigt, da fetch returnerer data som en byte array, og denne linje konverterer den til brugbar JSON-data.</p>
+      </section>
+          
+      <section>
+        <p>
+         <strong>.then(result => { ... }):</strong> Her kædes en anden .then() metode til resultatet fra .json()-kaldet. Denne blok eksekveres, når JSON-dataen er tilgængelig. I dette trin trækkes Pokemon-navnet ud af JSON-dataen og omdannes til en streng med stort begyndelsesbogstav. Derefter opdateres HTML-elementet med id'et 'randomPokemon' med det formaterede navn, og Pokemon-billedet vises ved hjælp af data fra JSON-svaret.
+        </p>
+      </section>
+
+      <section>
+        <p>
+         <strong>.catch(error => { ... }):</strong> Denne blok fanger eventuelle fejl, der kan opstå under hentningen af data fra PokeAPI'en. Hvis der opstår en fejl, logges den i konsollen, så du kan fejlrette og diagnosticere problemet.
+        </p>
+
+        <p>Husk at på en reell webside er det vigtigt at have respons og fejlmeldinger ud til brugeren af siden, og ikke bare en console.log eller console.error. </p>
+      </section>
+
+
+      <section>
+      <h2>API design og HTTP metoder</h2>
+
+      <p> API står for Application Programming Interface og er en "programmeringsgrænseflade," altså en række regler og protokoller, der gør det muligt for forskellige softwarekomponenter at kommunikere og dele data. Udviklere bruger API'er til at forbinde forskellige kodestykker og skabe applikationer, der er kraftfulde, robuste, sikre og i stand til at imødekomme brugernes behov. Selvom du ikke kan se dem, er API'er overalt og arbejder konstant i baggrunden for at drive de digitale oplevelser, der er essentielle for vores moderne liv.</p>
+
+      <img src="../2._javascript/images/API.png" alt="API Design" class="responsive-image"/>
+
+      </section>
+
+
+      <section>
+        <h2>POST - oprette ny</h2>
+
+        <pre>
+        <code class="responsive-snippet">
+      const newTask = {
+        title: "Lav indkøbsliste",
+        completed: false
+      };
       
+      fetch("https://example.com/api/tasks", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(newTask)
+      })
+        .then(response => response.json())
+        .then(data => {
+          console.log("Ny opgave oprettet:", data);
+        })
+        .catch(error => {
+          console.error("Fejl ved oprettelse af opgave:", error);
+        });
+          </code>
+        </pre>
+      </section>
+
+
+      <section class="bottom-section">
+        <p>I dette eksempelet bruges Fetch API til at udføre en HTTP POST-anmodning til et API-endpoint.</p>
+
+        <p><strong>JSON-data: </strong> API'er behandler normalt data i JSON-format, da det er et letlæseligt og letforståeligt dataformat, der er nemt at arbejde med både på server- og klientssiden. Ved at sende data som JSON kan du strukturere dine data på en måde, der gør det enkelt for API'en at forstå og behandle dem.
+        </p>
+        <p><strong>Headers: </strong>Headers bruges til at sende yderligere information sammen med din anmodning. I dette tilfælde bruges "Content-Type": "application/json"-headeren til at angive, at anmodningen indeholder JSON-data. Dette fortæller serveren, hvordan den skal behandle dataene i anmodningen. Specifikt indikerer denne header, at dataene i anmodningen er i JSON-format. Det er vigtigt at angive den korrekte Content-Type, da serveren skal vide, hvordan den skal analysere og behandle dataene.</p>
+    
+        </section>
+    
+        <button id="scrollToTopButton">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        
           </main>
        </div>
       </div>
     
-
+   
     <script type="module" src="./sidebar.js"></script>
+    <script type="module" src="../2._javascript/funktioner.js"></script>
 
   </body>
 </html>
