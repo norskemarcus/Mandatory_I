@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="../2._javascript/javascript.css"/>
+
+
+  <title>Clean code</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1 class="header-title">Clean code</h1>
+    </header>
+
+     <!-- Include the sidebar using JavaScript -->
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-placeholder">
+        </div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+ 
+      <h3 style="margin-top: 30px" >Hvorfor er clean code vigtigt?</h3>
+
+      <ul>
+        <li>
+          <strong>Læsbarhed:</strong> Clean code er let at læse, forstå og vedligeholde. Dette er vigtigt, da kode typisk læses af mennesker (inklusive dig selv i fremtiden), der skal forstå, hvad koden gør.
+        </li>
+        <li>
+          <strong>Fejlfinding:</strong> Clean code gør det lettere at spotte og rette fejl. Når koden er ryddelig og organiseret, bliver fejl mere synlige og nemmere at løse.
+        </li>
+        <li>
+          <strong>Samarbejde:</strong> Når flere udviklere arbejder sammen på et projekt, gør clean code samarbejdet lettere. Andre kan nemt forstå og bygge videre på din kode.
+        </li>
+        <li>
+          <strong>Vedligeholdelse:</strong> Projekter ændrer sig over tid. Clean code er mere fleksibel og lettere at tilpasse nye krav.
+        </li>
+        <li>
+          <strong>Effektivitet:</strong> Skrive clean code tvinger dig til at tænke mere omhyggeligt over, hvordan du løser problemer, hvilket kan føre til mere effektive løsninger.
+        </li>
+      </ul>
+
+
+      <h3 style="margin-top: 30px">Principper for clean code</h3>
+<ul>
+  <li>
+    <strong>Navngivning:</strong> Brug beskrivende og meningsfulde navne til variabler, funktioner og klasser. Undgå forkortelser, medmindre de er velkendte i branchen.
+  </li>
+  <li>
+    <strong>Kortfattet kode:</strong> Hold funktioner og metoder korte og fokuserede. Undgå lange funktioner, der gør for meget. Del komplekse opgaver op i mindre funktioner.
+  </li>
+  <li>
+    <strong>Kommentarer:</strong> Skriv klare og forståelige kommentarer, der forklarer komplekse eller uventede kodestykker. Undgå unødvendige kommentarer, da koden selv bør være selvforklarende.
+  </li>
+  <li>
+    <strong>En funktion, én opgave:</strong> Funktioner og metoder bør kun udføre én specifik opgave. Dette gør dem lettere at teste, forstå og vedligeholde.
+  </li>
+  <li>
+    <strong>Formatering og indrykning:</strong> Hold koden formateret konsistent. Brug indrykning for at fremhæve kodeblokke og gør koden let at scanne visuelt.
+  </li>
+  <li>
+    <strong>Undgå unødvendig kompleksitet:</strong> Hold det simpelt. Undgå dybt nedarvede strukturer og komplekse løsninger, medmindre det er absolut nødvendigt.
+  </li>
+  <li>
+    <strong>Testning:</strong> Skriv tests for din kode for at sikre, at den fungerer som forventet. Testdrevet udvikling (TDD) kan hjælpe med at opnå clean code.
+  </li>
+  <li>
+    <strong>Refaktorering:</strong> Løbende forbedr kodebasen ved at fjerne duplikation og forbedre strukturen. Refaktorér, når du ser mulighed for at gøre koden renere.
+  </li>
+</ul>
+
+
+      <section class="section-text">
+      
+
+      <section class="bottom-section">
+        
+       
+    
+        </section>
+    
+        <button id="scrollToTopButton">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        
+          </main>
+       </div>
+      </div>
+    
+   
+    <script type="module" src="./sidebar.js"></script>
+    <script type="module" src="../2._javascript/funktioner.js"></script>
+    
+
+  </body>
+</html>

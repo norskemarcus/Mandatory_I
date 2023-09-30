@@ -32,6 +32,8 @@ function escapeHTML(string) {
               <li><a class="dropdown-item" href="/variabler">Variabler og Scope</a></li>
               <li><a class="dropdown-item" href="/datatyper">Datatyper</a></li>
               <li><a class="dropdown-item" href="/datastrukturer">Datastrukturer</a></li>
+              <li><a class="dropdown-item" href="/clean-code">Clean Code</a></li>
+        
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -45,8 +47,7 @@ function escapeHTML(string) {
               <li><a class="dropdown-item" href="/async-await">Async/Await</a></li>
               <li><a class="dropdown-item" href="/event-loop">Event Loop</a></li>
               <li><a class="dropdown-item" href="/callbacks-vs-promises-vs-async-await">Callbacks vs. Promises vs. Async/Await</a></li>
-              <li><a class="dropdown-item" href="/clean-code">Clean Code</a></li>
-              <li><a class="dropdown-item" href="/kode-konventioner">Kode konventioner</a></li>
+            
             </ul>
           </li>
           <li class="nav-item dropdown">
@@ -54,8 +55,7 @@ function escapeHTML(string) {
               Node.js
             </a>
             <ul class="dropdown-menu" aria-labelledby="section3Dropdown">
-              <li><a class="dropdown-item" href="/node">Intro til Node.js</a></li>
-              <li><a class="dropdown-item" href="/bruge-node-js">Bruge Node.js</a></li>
+              <li><a class="dropdown-item" href="/node">Node.js</a></li>
               <li><a class="dropdown-item" href="/nodemon">Nodemon</a></li>
               <li><a class="dropdown-item" href="/package-managers-npm">Package Managers (npm)</a></li>
               <li><a class="dropdown-item" href="/package-json-og-meta-information">Package.json og meta information</a></li>

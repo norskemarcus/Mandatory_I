@@ -98,6 +98,8 @@ function handleSignOut() {
 }
 
 
+
+
 /* 
 
 const mobileMenuIcon = document.getElementById("mobileMenuIcon");

@@ -1,0 +1,16 @@
+
+
+.container-text-picture {
+  display: flex;
+  align-items: flex-start;
+  max-width: 800px; 
+  margin-right: 10%;
+   
+}
+
+
+.responsive-image-small {
+  max-width: 20%;
+  height: auto;
+  padding: 20px;
+} 

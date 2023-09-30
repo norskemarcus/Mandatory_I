@@ -35,25 +35,3 @@
   margin-bottom: 40px;
 }
 
-header {
-  background-color: #0bb66f;
-  color: white;
-  padding: 10px;
-  display: flex;
-  align-items: center; /* Vertically center the content */
-  justify-content: center; /* Horizontally center the content */
-}
-
-.header-icon {
-  font-size: 24px;
-  margin-right: auto;
-  margin-left: 10px;
-  color: black;
-}
-
-.header-title {
-  margin: 0;
-  flex-grow: 1; /* Allow the title to take up remaining space */
-  text-align: center; 
-}
-

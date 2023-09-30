@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <!-- Add Popper.js (required by some Bootstrap components) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+<!-- Add Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Add Bootstrap JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css"> 
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+/>
+
+<link rel="stylesheet" href="style.css"/>
+<link rel="stylesheet" href="../2._javascript/javascript.css"/>
+<link rel="stylesheet" href="../3._node/style.css">
+
+
+  <title>Nodemon</title>
+  </head>
+  <body>
+    <header>
+      <a href="/" class="header-icon">
+        <i class="fas fa-home"></i>
+      </a>
+      <h1 class="header-title">Nodemon</h1>
+    </header>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="sidebar-placeholder">
+        </div>
+
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+ 
+      <h2 style="margin-top: 30px" >Automatisk restart med Nodemon</h2>
+
+      <div class="container-text-picture">
+        <section class="section-text">
+          <p>
+            Nodemon er et værktøj, der gør udvikling af Node.js-applikationer nemmere og mere effektivt. Med Nodemon behøver du ikke manuelt genstarte din server hver gang, du foretager ændringer i din kode. Nodemon overvåger automatisk dine filer og genstarter serveren, når der sker ændringer, hvilket sparer dig tid og besvær.
+          </p>
+          <p>
+            Dette værktøj er især nyttigt under udviklingsprocessen, da det giver dig mulighed for hurtigt at se resultaterne af dine ændringer uden at afbryde arbejdsprocessen for at genstarte serveren manuelt.
+          </p>
+        </section>
+  
+        <img class="responsive-image-small" src="../3._node/images/nodemon.png" alt="nodemon.png">
+
+      </div>
+
+      <section class="section-text">
+        <p>For at indstallere Nodemon kører man denne kommando i terminalen:</p>
+
+        <pre><code class="responsive-snippet-small">npm install -g nodemon</code></pre>
+
+        <p>Når man skal bruge Nodemon, går man til den aktuelle mappe, fx. 02._Assignement> og skriver ind:</p>
+
+        <pre><code class="responsive-snippet-small">nodemon.cmd app.js</code></pre>
+
+
+      </section>
+    
+
+      <section class="bottom-section">
+       
+    
+      </section>
+    
+        <button id="scrollToTopButton">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+        
+          </main>
+       </div>
+      </div>
+    
+   
+    <script type="module" src="./sidebar.js"></script>
+    <script type="module" src="../2._javascript/funktioner.js"></script>
+    
+
+  </body>
+</html>

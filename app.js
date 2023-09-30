@@ -14,6 +14,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('public/frontpage.html'));
 });
 
+//  1.intro -------------------------------------------------------------------------
 
 app.get('/klient-server', (req, res) => {
   res.sendFile(path.resolve('public/1._intro/klient_server.html'));
@@ -33,6 +34,13 @@ app.get('/datastrukturer', (req, res) => {
   res.sendFile(path.resolve('public/1._intro/datastrukturer.html'));
 });
 
+app.get('/clean-code', (req, res) => {
+  res.sendFile(path.resolve('public/1._intro/clean_code.html'));
+});
+
+// 2.javascript  -----------------------------------------------------------------------------
+
+
 app.get('/funktioner', (req, res) => {
   res.sendFile(path.resolve('public/2._javascript/funktioner.html'));
 });
@@ -51,7 +59,14 @@ app.get('/node', (req, res) => {
   res.sendFile(path.resolve('public/3._node/node.html'));
 });
 
-// mere her
+
+app.get('/nodemon', (req, res) => {
+  res.sendFile(path.resolve('public/3._node/nodemon.html'));
+});
+
+
+
+// -------------------------------------------------------------------------------------------------
 
 app.get('/express', (req, res) => {
   res.sendFile(path.resolve('public/4._express/express.html'));
@@ -61,6 +76,8 @@ app.get('/installere-express', (req, res) => {
   res.sendFile(path.resolve('public/4._express/express_projekt.html'));
 });
 
+
+// ---------------------------------------------------------------------------------------------
 
 
 const PORT = 8080;

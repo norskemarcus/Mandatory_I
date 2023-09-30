@@ -15,7 +15,6 @@ h2 {
   height: auto;
 }
 
-
 .responsive-snippet {
   max-width: 70%;
   height: auto;
@@ -25,6 +24,7 @@ h2 {
   max-width: 30%;
   height: auto;
 }
+
 
 .bottom-section {
   margin-bottom: 20vh;
