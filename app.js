@@ -4,14 +4,11 @@ import express from 'express';
 const app = express();
 app.use(express.static('public'));
 
-import {readPage, renderPage } from "./util/templateEngine.js"
+import {frontpagePage, clientServerPage, variablerScopePage, datatypesPage,
+   datastructurePage, cleancodePage, functionsPage, arrowCallbackPage, fetchPage,
+    nodePage, nodemonPage, expressPage, expressProjectPage} from "./util/preparePages.js"
 
 
-const frontPage = readPage("./public/pages/frontpage/frontpage.html");
-const frontpagePage = renderPage(frontPage, {
-  tabTitle:"Kodekilden",
-  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">`
-});
 
 app.get('/', (req, res) => {
   res.send(frontpagePage);
@@ -20,69 +17,70 @@ app.get('/', (req, res) => {
 //  1.intro -------------------------------------------------------------------------
 
 app.get('/klient-server', (req, res) => {
- 
+ res.send(clientServerPage);
 });
-
 
 app.get('/variabler', (req, res) => {
-//  res.sendFile(path.resolve('public/1._intro/variabler_scope.html'));
+  res.send(variablerScopePage);
 });
 
-
 app.get('/datatyper', (req, res) => {
- // res.sendFile(path.resolve('public/1._intro/datatyper.html'));
+ res.send(datatypesPage);
 });
 
 app.get('/datastrukturer', (req, res) => {
- // res.sendFile(path.resolve('public/1._intro/datastrukturer.html'));
+ res.send(datastructurePage);
 });
 
 app.get('/clean-code', (req, res) => {
- // res.sendFile(path.resolve('public/1._intro/clean_code.html'));
+ res.send(cleancodePage);
 });
+
 
 // 2.javascript  -----------------------------------------------------------------------------
 
 
 app.get('/funktioner', (req, res) => {
- // res.sendFile(path.resolve('public/2._javascript/funktioner.html'));
+  res.send(functionsPage);
 });
 
 app.get('/callback-arrow', (req, res) => {
- // res.sendFile(path.resolve('public/2._javascript/callback_arrow.html'));
+ res.send(arrowCallbackPage);
 });
 
 
 app.get('/fetch', (req, res) => {
-//  res.sendFile(path.resolve('public/2._javascript/fetch.html'));
+  res.send(fetchPage);
 });
 
 
 app.get('/node', (req, res) => {
- // res.sendFile(path.resolve('public/3._node/node.html'));
+ res.send(nodePage);
 });
 
 
 app.get('/nodemon', (req, res) => {
-//  res.sendFile(path.resolve('public/3._node/nodemon.html'));
+ res.send(nodemonPage);
 });
 
+// Mangler her: Package managers, package.json og meta info, entry point, require og import
 
 
 // -------------------------------------------------------------------------------------------------
 
 app.get('/express', (req, res) => {
-//  res.sendFile(path.resolve('public/4._express/express.html'));
+  res.send(expressPage);
 });
 
 app.get('/installere-express', (req, res) => {
- // res.sendFile(path.resolve('public/4._express/express_projekt.html'));
+ res.send(expressProjectPage);
 });
 
 
 // ---------------------------------------------------------------------------------------------
 
-//const PORT = process.env.PORT ? Number(process.env.PORT) || 8080:;
+
+//const PORT = process.env.PORT ? Number(process.env.PORT) || 8080;
 const PORT = Number(process.env.PORT);
 app.listen(PORT, error => {
   if (error) {
