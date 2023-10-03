@@ -1,67 +1,70 @@
 
-// Backend med node
 
-// const express = require('express');
 import express from 'express';
 const app = express();
 app.use(express.static('public'));
 
+import {readPage, renderPage } from "./util/templateEngine.js"
 
-import path from 'path'; // eksistererer internt i node, men pga effektivitet skal man importere det
-// kan ikke længere bruge dette: console.log(__dirname); // les fejlbesked
+
+const frontPage = readPage("./public/pages/frontpage/frontpage.html");
+const frontpagePage = renderPage(frontPage, {
+  tabTitle:"Kodekilden",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">`
+});
 
 app.get('/', (req, res) => {
-  res.sendFile(path.resolve('public/frontpage.html'));
+  res.send(frontpagePage);
 });
 
 //  1.intro -------------------------------------------------------------------------
 
 app.get('/klient-server', (req, res) => {
-  res.sendFile(path.resolve('public/1._intro/klient_server.html'));
+ 
 });
 
 
 app.get('/variabler', (req, res) => {
-  res.sendFile(path.resolve('public/1._intro/variabler_scope.html'));
+//  res.sendFile(path.resolve('public/1._intro/variabler_scope.html'));
 });
 
 
 app.get('/datatyper', (req, res) => {
-  res.sendFile(path.resolve('public/1._intro/datatyper.html'));
+ // res.sendFile(path.resolve('public/1._intro/datatyper.html'));
 });
 
 app.get('/datastrukturer', (req, res) => {
-  res.sendFile(path.resolve('public/1._intro/datastrukturer.html'));
+ // res.sendFile(path.resolve('public/1._intro/datastrukturer.html'));
 });
 
 app.get('/clean-code', (req, res) => {
-  res.sendFile(path.resolve('public/1._intro/clean_code.html'));
+ // res.sendFile(path.resolve('public/1._intro/clean_code.html'));
 });
 
 // 2.javascript  -----------------------------------------------------------------------------
 
 
 app.get('/funktioner', (req, res) => {
-  res.sendFile(path.resolve('public/2._javascript/funktioner.html'));
+ // res.sendFile(path.resolve('public/2._javascript/funktioner.html'));
 });
 
 app.get('/callback-arrow', (req, res) => {
-  res.sendFile(path.resolve('public/2._javascript/callback_arrow.html'));
+ // res.sendFile(path.resolve('public/2._javascript/callback_arrow.html'));
 });
 
 
 app.get('/fetch', (req, res) => {
-  res.sendFile(path.resolve('public/2._javascript/fetch.html'));
+//  res.sendFile(path.resolve('public/2._javascript/fetch.html'));
 });
 
 
 app.get('/node', (req, res) => {
-  res.sendFile(path.resolve('public/3._node/node.html'));
+ // res.sendFile(path.resolve('public/3._node/node.html'));
 });
 
 
 app.get('/nodemon', (req, res) => {
-  res.sendFile(path.resolve('public/3._node/nodemon.html'));
+//  res.sendFile(path.resolve('public/3._node/nodemon.html'));
 });
 
 
@@ -69,19 +72,19 @@ app.get('/nodemon', (req, res) => {
 // -------------------------------------------------------------------------------------------------
 
 app.get('/express', (req, res) => {
-  res.sendFile(path.resolve('public/4._express/express.html'));
+//  res.sendFile(path.resolve('public/4._express/express.html'));
 });
 
 app.get('/installere-express', (req, res) => {
-  res.sendFile(path.resolve('public/4._express/express_projekt.html'));
+ // res.sendFile(path.resolve('public/4._express/express_projekt.html'));
 });
 
 
 // ---------------------------------------------------------------------------------------------
 
-
-const PORT = 8080;
-app.listen(8080, error => {
+//const PORT = process.env.PORT ? Number(process.env.PORT) || 8080:;
+const PORT = Number(process.env.PORT);
+app.listen(PORT, error => {
   if (error) {
     console.log('Server failed to start', error);
     return;
