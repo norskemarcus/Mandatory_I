@@ -20,3 +20,14 @@ window.addEventListener('scroll', () => {
     scrollToTopButton.style.display = 'none';
   }
 });
+
+
+
+// Her forsøger jeg at få html op ved fejl route...
+
+// const urlParams = new URLSearchParams(window.location.search);
+// const message = urlParams.get('message');
+
+// if (message) {
+//   alert(decodeURIComponent(message));
+// }

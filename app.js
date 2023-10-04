@@ -6,7 +6,8 @@ app.use(express.static('public'));
 
 import {frontpagePage, clientServerPage, variablerScopePage, datatypesPage,
    datastructurePage, cleancodePage, functionsPage, arrowCallbackPage, fetchPage,
-    nodePage, nodemonPage, expressPage, expressProjectPage, middlewarePage} from "./util/preparePages.js"
+    nodePage, nodemonPage, expressPage, expressProjectPage, middlewarePage,
+    packagemanagersPage} from "./util/preparePages.js"
 
 
 app.get('/', (req, res) => {
@@ -62,6 +63,12 @@ app.get('/nodemon', (req, res) => {
  res.send(nodemonPage);
 });
 
+
+app.get('/package-managers', (req, res) => {
+  res.send(packagemanagersPage);
+ });
+ 
+
 // Mangler her: Package managers, package.json og meta info, entry point, require og import
 
 
@@ -83,6 +90,25 @@ app.get('/middleware', (req, res) => {
 
 
 // ---------------------------------------------------------------------------------------------
+
+// Error handling if route does not exist:
+app.use((req, res, next) => {
+  // Opret en ny fejl som en ny Error-objekt
+  const error = new Error('Siden blev ikke fundet');
+  error.status = 404; // page not
+  next(error); // Send fejlen videre til næste middleware
+});
+
+
+app.use((error, req, res, next) => {
+  res.status(error.status || 500); 
+  res.send({
+    error: {
+      message: error.message,
+    },
+  });
+});
+
 
 
 //const PORT = process.env.PORT ? Number(process.env.PORT) || 8080;

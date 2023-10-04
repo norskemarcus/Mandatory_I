@@ -88,7 +88,6 @@ export const fetchPage = renderPage(fetch, {
 });
 
 
-// Mangler: event loop og callbacks vs promises cs async await
 
 
 // 3._node ==========================================================================
@@ -105,12 +104,23 @@ export const nodePage = renderPage(node, {
 
 const nodemon = readPage("./public/pages/3._node/nodemon.html");
 export const nodemonPage = renderPage(nodemon, {
-  tabTitle: "Node",
+  tabTitle: "Nodemon",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
   <link rel="stylesheet" href="./pages/3._node/nodestyle.css">
   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
 });
+
+
+const packagemanagers = readPage("./public/pages/3._node/package_managers.html");
+export const packagemanagersPage = renderPage(packagemanagers, {
+  tabTitle: "Package managers",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+  <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="./pages/3._node/nodestyle.css">
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+});
+
 
 
 
