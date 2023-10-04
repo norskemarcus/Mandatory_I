@@ -8,6 +8,7 @@
   </script>
 
       <main class="content">
+        <div class="infobox">
         <section class="section-text">
           <p>Datastrukturer bruges til at organisere og opbevare data på en måde, der gør det nemt at tilgå og manipulere. I JavaScript har man Arrays og objekter.</p>
         </section>
@@ -46,11 +47,11 @@ farver.splice(farver.indexOf('grøn') + 1, 0, 'pink', 'brun');
           <h3>Kopiering af arrays</h3>
           <p>Du kan kopiere et array ved hjælp af spread-operatoren eller <code>slice()</code>-metoden:</p>
           <pre><code class="responsive-snippet-small">
-    // Brug spread-operatoren
-    let kopieretArray = [...farver];
+  // Brug spread-operatoren
+  let kopieretArray = [...farver];
 
-    // Brug slice() metoden
-    let kopieretArray = farver.slice();
+  // Brug slice() metoden
+  let kopieretArray = farver.slice();
           </code></pre>
       </section>
 
@@ -114,7 +115,7 @@ farver.splice(farver.indexOf('grøn') + 1, 0, 'pink', 'brun');
       </button>
       
 
-
+        </div>
   </main>
 
   <script type="module" src="/06._Mandatory_I/public/assets/js/script.js"></script>

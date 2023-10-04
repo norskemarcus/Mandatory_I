@@ -137,10 +137,10 @@ export const expressProjectPage = renderPage(expressProject, {
 
 
 
-// const middleware = readPage("./public/pages/4._express/middleware.html");
-// export const middlewarePage = renderPage(middleware, {
-//   tabTitle: "Middleware",
-//   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
-//   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
-//   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
-// });
+const middleware = readPage("./public/pages/4._express/middleware.html");
+export const middlewarePage = renderPage(middleware, {
+  tabTitle: "Middleware",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+  <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+});

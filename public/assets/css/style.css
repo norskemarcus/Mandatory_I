@@ -68,7 +68,7 @@ header {
   color: #333; 
 }
 
-/* Override Bootstrap's modal backdrop color */
+
 .modal-backdrop {
   background-color: #74d34c;
 }
@@ -80,11 +80,6 @@ header {
   border-color: #74d34c; 
 }
 
-/* Gør hovedindholdet fleksibelt og udfyld tilgængelig plads */
-/* 
-#mainContainer {
-  flex-grow: 1;  
-} */
 
 
 /* Hide the hamburger icon by default */

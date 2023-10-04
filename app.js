@@ -6,9 +6,8 @@ app.use(express.static('public'));
 
 import {frontpagePage, clientServerPage, variablerScopePage, datatypesPage,
    datastructurePage, cleancodePage, functionsPage, arrowCallbackPage, fetchPage,
-    nodePage, nodemonPage, expressPage, expressProjectPage} from "./util/preparePages.js"
+    nodePage, nodemonPage, expressPage, expressProjectPage, middlewarePage} from "./util/preparePages.js"
 
-// middlewarePage
 
 app.get('/', (req, res) => {
   res.send(frontpagePage);
@@ -77,9 +76,9 @@ app.get('/installere-express', (req, res) => {
 });
 
 
-// app.get('/middleware', (req, res) => {
-//   res.send(middlewarePage);
-//  });
+app.get('/middleware', (req, res) => {
+  res.send(middlewarePage);
+ });
  
 
 

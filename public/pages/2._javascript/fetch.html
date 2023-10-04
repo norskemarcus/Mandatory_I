@@ -7,14 +7,16 @@
 
  
 <main class="content">
+  <div class="infobox">
       <section class="section-text">
-      <p>At fetche data kan forstås som at hente data, men man kan også udføre andre operationer, som at opdatere, lægge til eller slette data.</p>
+        <h2>At <i>fetche</i> data?</h2>
+      <p>At <strong>fetche data</strong> kan forstås som at hente data, men man kan også udføre andre operationer, som at opdatere, lægge til eller slette data.</p>
 
-      <p>Vi tager udgangspunkt i et eksempel der vi henter en tilfældig pokemon ud fra id, fra et eksternt API (random funktionen ses ikke her). Hvis det ikke står andet er det en GET-request, som denne her:
+      <p>Vi tager udgangspunkt i et eksempel der vi henter en tilfældig pokemon ud fra en random id, fra et eksternt API (random funktionen ses ikke her). Hvis det ikke står andet er det en GET-request, som denne her:
       </p>
     
             <pre>
-            <code> 
+            <code class="responsive-snippet"> 
   fetch(`https://pokeapi.co/api/v2/pokemon/${randomPokemonId}/`)
    .then(response => response.json())
   // evt error handling her med da skal det return på response.json()
@@ -36,6 +38,7 @@
       </section>
 
       <section class="section-text">
+        <p>Hvis man skal forstå de forskellige aspekter af et fetch-kald, bliver man nødt til at kigge på de forskellige dele af koden:</p>
         <p><strong>.then(response => response.json()):</strong> Her kædes en promise-metode, .then(), til resultatet af fetch-anmodningen. Når anmodningen er afsluttet, indeholder response objektet information om anmodningens resultat, f.eks. statuskoden og headers. response.json() er en asynkron funktion, der bruges til at læse og returnere JSON-data fra svaret. Dette er nødvendigt, da fetch returnerer data som en byte array, og denne linje konverterer den til brugbar JSON-data.</p>
       </section>
           
@@ -108,7 +111,7 @@
         </button>
         
   
-  
+  </div>
     </main>
   
     <script type="module" src="/06._Mandatory_I/public/pages/2._javascript/funktioner.js"></script>

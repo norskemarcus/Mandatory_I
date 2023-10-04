@@ -8,6 +8,7 @@
 
  
       <main class="content">
+        <div class="infobox">
         <section class="section-text">
           <h2>Dynamiske datatyper</h2>
           <p>
@@ -51,7 +52,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
   I eksempelet nedenunder ser man et eksempel på en typekonvertering som går galt:
   </p>
 
-     <pre><code class="responsive-snippet">
+     <pre><code class="responsive-snippet-medium">
         a = true + 2
         console.log(a);
         // a bliver automatisk konverteret til 1, så svaret er 3 
@@ -83,7 +84,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
                </li>
           </ul>
               <pre>
-                <code>
+                <code class="responsive-snippet-medium">
       const ukendt = Symbol('Dette er et unikt symbol');
       let obj = {};
       obj[ukendt] = 'Dette er en skjult værdi';
@@ -99,7 +100,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
           <p>Ud over primitive datatyper har JavaScript også objekter, der kan bruges til at organisere og opbevare data. Objekter er samlinger af nøgle-værdi-par (key value). Eksempel:</p>
       
           <pre>
-          <code>
+          <code class="responsive-snippet-medium">
           let person = {
             navn: 'John Doe',
             alder: 30,
@@ -117,7 +118,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
             <h2><i>typeof</i> og ===</h2>
 
             <p>Hvis du er i tvivl om hvilken datatype en variabel er, så kan man bruge typeof operator:</p>
-            <pre><code>
+            <pre><code class="responsive-snippet-medium">
       let nummer = 42;
       console.log(typeof nummer); // Udskriver "number"
 
@@ -133,7 +134,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
             </p>
 
               <pre>
-                <code>
+                <code class="responsive-snippet-small">
       1 == "1"; // true
       1 === "1"; // false
               </code></pre>
@@ -146,6 +147,7 @@ Det er dog vigtigt at være opmærksom på, at svag typning kan føre til uvente
 
 
           </section>
+        </div>
       </main>
      
          

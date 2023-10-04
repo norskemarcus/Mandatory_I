@@ -7,6 +7,7 @@
   </script>
 
 <main class="content">
+  <div class="infobox">
         <section class="section-text">
 
           <h2>Arrow funktioner</h2>
@@ -18,7 +19,7 @@
             Her er et eksempel på en arrow-funktion:
           </p>
       
-          <pre><code>     
+          <pre><code class="responsive-snippet-medium">     
       const addArrow = (a, b) => a + b;
       
       console.log(addArrow(3, 5)); // Resultat: 8
@@ -32,7 +33,7 @@
             En anden vigtig egenskab ved arrow-funktioner er, at de bevarer det omsluttende scopes 'this'. Dette gør dem velegnede til brug som callback-funktioner og i kontekster, hvor du ønsker at undgå 'this'-problemer.
           </p>
       
-          <pre><code>
+          <pre><code class="responsive-snippet">
       const person = {
         name: "Alice",
         sayHello: function() {
@@ -71,7 +72,7 @@
             Her er et grundlæggende eksempel på brugen af callback-funktioner:
           </p>
       
-          <pre><code>
+          <pre><code class="responsive-snippet">
       function genericActionPerformer(genericAction, name) {
         return genericAction(name);
       }
@@ -88,14 +89,14 @@
             Du kan også lave det samme på én linje:
           </p>
       
-          <pre><code>
+          <pre><code class="responsive-snippet">
       console.log(genericActionPerformer((name) => `${name} is sleeping`, "Daniel"));
           </code></pre>
       
           <p>
             Callback-funktioner giver stor fleksibilitet og kan bruges i forskellige sammenhænge, såsom event-håndtering og asynkron kommunikation med servere.
           </p>
-          <section>
+        </section>
     
 
             <button id="scrollToTopButton">
@@ -103,7 +104,8 @@
             </button>
             
       
-    
+    </div>
+
         </main>
       
       <script type="module" src="/06._Mandatory_I/public/assets/js/script.js"></script>

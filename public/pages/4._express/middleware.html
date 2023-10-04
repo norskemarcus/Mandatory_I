@@ -1,0 +1,47 @@
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+<main class="content">
+  <div class="infobox">
+  <h3>Middleware i Express.js</h3>
+  <section class="section-text">
+  <p>
+    Express.js gør brug af middleware til at forenkle og strukturere din webapplikations logik. 
+    Middleware er et koncept, der ligger til grund for Express og giver dig mulighed for at behandle 
+    anmodninger og svar på forskellige måder i din applikation.
+  </p>
+  
+  <p>
+    Middleware-funktioner kan tilføjes i din Express-applikation ved hjælp af <code>app.use()</code>-metoden. 
+    De udføres i rækkefølge, når en anmodning når din server, og de kan udføre forskellige opgaver som f.eks. autentificering, 
+    logning, validering af data eller tilføjelse af brugerdefinerede headere til responsen.
+  </p>
+  
+  <p>
+    Et simpelt eksempel på middleware i Express er at logge hver indkommende anmodning til din server. 
+    Dette kan gøres ved at tilføje følgende middleware-funktion til din applikation:
+  </p>
+  
+  <pre><code class="responsive-snippet-medium">
+  app.use((req, res, next) => {
+    console.log(`Indkommende anmodning til: ${req.url}`);
+    next(); // Required to continue the request
+  });
+  </code></pre>
+  
+  <p>
+    Middleware har adgang til både anmodnings- og responsobjekterne samt en <code>next()</code>-funktion, 
+    der bruges til at passere kontrollen til det næste middleware i stakken.
+  </p>
+  
+  <p>
+    Middleware i Express giver dig mulighed for at opbygge avancerede applikationer og håndtere en bred vifte af opgaver på en 
+    struktureret måde. Det gør det også muligt at tilføje og fjerne middleware efter behov, hvilket gør din applikation fleksibel og let at vedligeholde.
+  </p>
+  
+</section>
+  </div>
+  </main>
