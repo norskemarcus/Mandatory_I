@@ -42,9 +42,15 @@
     
 
       <section class="bottom-section">
-       <p>SKRIVE HER OM DET VI LÆRTE I DAG!!!</p>
+        <p>Man kan også tilføje en nodemon.json fil der man skriver hvilke extensions den skal lytte til og så i package.json tilføje denne kode under scripts : </p>
 
-    
+        <pre><code>
+          "scripts": {
+            "start:def":  "cross-env PORT=8080 nodemon app.js",
+            "start:prod": "cross-env PORT=80 node app.js"
+          },
+        </code></pre>
+  
       </section>
     
      
