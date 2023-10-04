@@ -122,6 +122,27 @@ export const packagemanagersPage = renderPage(packagemanagers, {
 });
 
 
+const entrypoint = readPage("./public/pages/3._node/entrypoint.html");
+export const entrypointPage = renderPage(entrypoint, {
+  tabTitle: "Entry point",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+  <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="./pages/3._node/nodestyle.css">
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+});
+
+
+const require = readPage("./public/pages/3._node/require.html");
+export const requirePage = renderPage(require, {
+  tabTitle: "Require vs import",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+  <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="./pages/3._node/nodestyle.css">
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+});
+
+
+
 
 
 

@@ -7,7 +7,7 @@ app.use(express.static('public'));
 import {frontpagePage, clientServerPage, variablerScopePage, datatypesPage,
    datastructurePage, cleancodePage, functionsPage, arrowCallbackPage, fetchPage,
     nodePage, nodemonPage, expressPage, expressProjectPage, middlewarePage,
-    packagemanagersPage} from "./util/preparePages.js"
+    packagemanagersPage, entrypointPage, requirePage} from "./util/preparePages.js"
 
 
 app.get('/', (req, res) => {
@@ -53,6 +53,7 @@ app.get('/fetch', (req, res) => {
   res.send(fetchPage);
 });
 
+// 3._node ============================================================
 
 app.get('/node', (req, res) => {
  res.send(nodePage);
@@ -67,7 +68,17 @@ app.get('/nodemon', (req, res) => {
 app.get('/package-managers', (req, res) => {
   res.send(packagemanagersPage);
  });
+
+
+ app.get('/entrypoint', (req, res) => {
+  res.send(entrypointPage);
+ });
  
+ app.get('/require-vs-import', (req, res) => {
+  res.send(requirePage);
+ });
+ 
+
 
 // Mangler her: Package managers, package.json og meta info, entry point, require og import
 

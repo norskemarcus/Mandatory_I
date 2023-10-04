@@ -12,89 +12,41 @@
       <section class="section-text">
 
         <p>
-          En package manager er en softwareværktøj, der bruges til at administrere og organisere eksterne biblioteker, moduler og afhængigheder i et softwareprojekt. Disse værktøjer gør det nemt for udviklere at installere, opdatere, konfigurere og fjerne de nødvendige komponenter, der kræves for at bygge og køre deres software. Her er nogle nøgleelementer i forbindelse med package managers:
+          En package manager er et softwareværktøj, der bruges til at administrere og organisere eksterne biblioteker, moduler og afhængigheder i et softwareprojekt. Disse værktøjer gør det nemt for udviklere at installere, opdatere, konfigurere og fjerne de nødvendige komponenter, der kræves for at bygge og køre deres software. 
         </p>
 
-        <ol>
-          <li><strong>Afængigheder:</strong> Softwareprojekter kræver ofte eksterne ressourcer, såsom biblioteker, moduler eller andre kodekomponenter, for at fungere korrekt. Disse eksterne ressourcer kaldes afhængigheder.</li>
-
-          <li><strong>Versionering:</strong> En package manager giver normalt mulighed for at specificere versionsnumre for hver afhængighed. Dette er vigtigt for at sikre, at projektet bruger den nøjagtige version af en afhængighed, der er kompatibel med dets kode.</li>
-
-          <li><strong>Installation og opdatering:</strong> Package managere giver kommandoer til at installere nye afhængigheder og opdatere eksisterende. Dette gør det let at tilføje nye funktioner eller rette fejl ved at opdatere de nødvendige komponenter.</li>
-
-          <li><strong>Konfiguration:</strong> Ud over at administrere afhængigheder kan package managere også håndtere konfiguration og indstillinger for et projekt. Dette omfatter ofte opsætning af byggeprocessen etc.</li>
-        </ol>
-        
-        <h3>Sammenligning af Maven og npm:</h3>
-
-
-        <h5>Afhængigheder:</h5>
         <ul>
-            <li>
-                <strong>Maven:</strong>
-                <p>
-                    Maven fokuserer primært på Java-projekter og administrerer Java-afhængigheder. Disse afhængigheder er specificeret i en XML-fil kaldet <code>pom.xml</code>.
-                </p>
-            </li>
-            <li>
-                <strong>npm:</strong>
-                <p>
-                    npm er specielt designet til JavaScript-projekter, især Node.js-applikationer. Det administrerer JavaScript-afhængigheder, der er angivet i en fil kaldet <code>package.json</code>.
-                </p>
-            </li>
-        </ul>
-    
-        <h5>Versionering:</h5>
-        <ul>
-            <li>
-                <strong>Maven:</strong>
-                <p>
-                    Versionsstyring af afhængigheder i Maven håndteres ved hjælp af versionsnumre i <code>pom.xml</code>-filen. Maven kan også administrere afhængigheder fra forskellige repositories.
-                </p>
-            </li>
-            <li>
-                <strong>npm:</strong>
-                <p>
-                    npm bruger en versionsstyringsstrategi kaldet "Semantic Versioning" (semver), hvoraf ahængigheder specificeres med versionsnumre i <code>package.json</code>. Semver hjælper med at angive, hvordan opdateringer af en afhængighed skal håndteres.
-                </p>
-            </li>
-        </ul>
-    
-        <h5>Installation og Opdatering:</h5>
-        <ul>
-            <li>
-                <strong>Maven:</strong>
-                <p>
-                    Maven bruger kommandoer som <code>mvn install</code> eller <code>mvn clean install</code> til at installere afhængigheder og byggeprojekter. Opdatering af afhængigheder kræver normalt en opdatering af <code>pom.xml</code>-filen og en gentagelse af bygningsprocessen.
-                </p>
-            </li>
-            <li>
-                <strong>npm:</strong>
-                <p>
-                    npm bruger kommandoer som <code>npm install</code> eller <code>npm update</code> til at installere og opdatere afhængigheder. npm opdaterer automatisk <code>package.json</code>-filen med de seneste versioner.
-                </p>
-            </li>
-        </ul>
-    
-        <h5>Konfiguration:</h5>
-        <ul>
-            <li>
-                <strong>Maven:</strong>
-                <p>
-                    Maven bruges ofte til at konfigurere Java-projekter, inklusive opsætning af build-cyklusser, integration med IDE'er og konfiguration af plugins. Maven-projekter kan også have tilpassede konfigurationsfiler.
-                </p>
-            </li>
-            <li>
-                <strong>npm:</strong>
-                <p>
-                    npm hjælper med at konfigurere Node.js-projekter og kan inkludere scripts til forskellige opgaver, f.eks. bygning, test og kørsel af applikationer. Konfiguration af npm-projekter er ofte specificeret i <code>package.json</code>.
-                </p>
-            </li>
-        </ul>
+          <li><strong>Afængigheder:</strong> Softwareprojekter kræver ofte eksterne ressourcer, såsom biblioteker, moduler eller andre kodekomponenter, for at fungere korrekt. I Java-projekter er disse afhængigheder specificeret i en XML-fil kaldet <code>pom.xml</code>. Derimod i JavaScript-projekter, især Node.js-applikationer, bruger man npm og da bliver afhængighederne beskrevet i filen <code>package.json</code>.
+          </li>
+          <br>
 
+          <li><strong>Versionering:</strong> En package manager giver normalt mulighed for at specificere versionsnumre for hver afhængighed. Dette er vigtigt for at sikre, at projektet bruger den nøjagtige version af en afhængighed, der er kompatibel med dets kode. Versionsstyring af afhængigheder i Maven håndteres ved hjælp af versionsnumre i <code>pom.xml</code>-filen. Maven kan også administrere afhængigheder fra forskellige repositories.  
+          I javascript-verden npm bruger en versionsstyringsstrategi kaldet "Semantic Versioning", hvoraf ahængigheder specificeres med versionsnumre i <code>package.json</code>. Semantic versioning hjælper med at angive, hvordan opdateringer af en afhængighed skal håndteres.
+          </li>
+          <br>
 
+          <li><strong>Installation og opdatering:</strong> Package managere giver kommandoer til at installere nye afhængigheder og opdatere eksisterende. Dette gør det let at tilføje nye funktioner eller rette fejl ved at opdatere de nødvendige komponenter. Maven bruger kommandoer som <code>mvn install</code> eller <code>mvn clean install</code> til at installere afhængigheder og byggeprojekter. Opdatering af afhængigheder kræver normalt en opdatering af <code>pom.xml</code>-filen og en gentagelse af bygningsprocessen. npm bruger kommandoer som <code>npm install</code> eller <code>npm update</code> til at installere og opdatere afhængigheder. npm opdaterer automatisk <code>package.json</code>-filen med de seneste versioner.
+      </li>
+      <br>
+
+          <li><strong>Konfiguration:</strong> Ud over at administrere afhængigheder kan package managere også håndtere konfiguration og indstillinger for et projekt. Maven bruges ofte til at konfigurere Java-projekter, inklusive opsætning af build-cyklusser, integration med IDE'er og konfiguration af plugins. Maven-projekter kan også have tilpassede konfigurationsfiler. npm hjælper med at konfigurere Node.js-projekter og kan inkludere scripts til forskellige opgaver, f.eks. bygning, test og kørsel af applikationer. Konfiguration af npm-projekter er ofte specificeret i <code>package.json</code>. </li>
+        </ul>
       
       </section>
+
+      <section>
+
+      <p>Her er en skematisk oversigt:</p>
+
+      <img src="/pages/3._node/images/package_managers.png" alt="package managers">
+
+      </section>
+
+      <section>
+              <p><strong>Andre package managers</strong> er: Yarn (hurtigt, lavet til Javascript og node.js), pnpm (også JavaScript), pip (python), Gradle (Java, Android, Grooby projekter) og Cargo (Rust).</p>
+      </section>
+      
+
   </div>
      
 </main>

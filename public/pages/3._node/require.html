@@ -1,0 +1,57 @@
+
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+<main class="content">
+  <div class="infobox">
+
+    <h2>Moduler og packages</h2>
+    <p>
+      Require og import er to keywords man kommer over i Node.js. Det er særlig aktuelt at bruge import til moduler, når man skal lave en server-side-rendering side, da denne bygges op af moduler (lokale moduler som udvikleren selv har lavet og settes sammen med en template engine). Det findes også andre typer moduler; kernemoduler (som fs, filesystem) og tredjeparts-moduler som Express og Mongoose, som er tilgængelige efter man har indstalleret de.  
+    </p>
+
+
+    <h2>Require (synkront)</h2>
+    <p>
+      Når du bruger <i>require</i> i Node.js eller CommonJS-moduler, er det en synkron operation, hvilket betyder, at koden ventes på, at modulet indlæses, før den fortsætter med at køre. Performance er mindre effektiv på grund af synkron indlæsning. Bruges der require importeres hele modulet, hvilket kan medføre større hukommelsesforbrug. 
+    </p>
+
+    <pre><code class="responsive-snippet-small">
+const express = require('express');
+const app = express();
+          </code></pre>
+
+   
+
+    <h2>Import (asynkront)</h2>
+
+      <pre><code class="responsive-snippet-small">
+import express from 'express';
+const app = express();
+       </code></pre>
+    <p>
+      Når du bruger <i>import</i> i ES6-moduler (ECMAScript 6), er det en asynkron operation, hvilket betyder, at det indlæses asynkront, og koden fortsætter med at køre uden at vente på indlæsningen og dette giver bedre ydeevne. ES6-moduler bruges primært i moderne webbrowsere og front-end-udvikling, hvor asynkron indlæsning er mere almindelig. Ved import tillades det selektiv indlæsning af kode fra et modul, hvilket reducerer hukommelsesforbruget. 
+    </p>
+    <p>
+      Når du bruger ES6-moduler i en browser, er det vigtigt at angive type="module" i script-taggen (se kode under, tag er fjernet for at det skal kunne vises). Dette fortæller browseren, at det er et ES6-modul, og den skal indlæses og afvikles som sådan. Man kan importere komponenter som er eksporteret med 'export' i modulet. Man skal også enten konfigurere projektet med "type": "module" i package.json, eller bruge .mjs-filudvidelsen.
+    </p>
+
+    <pre><code class="responsive-snippet-medium">
+  script type="module" src="/public/assets/js/script.js"> script
+    </code></pre>
+
+    <section class="section-text">
+
+
+
+  </div>
+     
+</main>
+    
+    
+
+

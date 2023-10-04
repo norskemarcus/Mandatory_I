@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Add Popper.js (required by some Bootstrap components) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
+
+  <!-- Add Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
+
+  <!-- jQuery library -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <!-- Add Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style_new.css" />
+  $CSS_LINKS
+  <title>$TAB_TITLE</title>
+</head>
+<body>
+  <header class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+  
+        <a href="/" class="navbar-brand">
+          <i class="fa fa-home"></i>
+        </a>
+        <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon">
+          <i class="fa fa-bars" style="color: transparent;"></i>
+        </span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <!-- Create a custom navbar menu -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section1Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Introduktion
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section1Dropdown">
+                <li><a class="dropdown-item" href="/klient-server">Klient-server-modellen</a></li>
+                <li><a class="dropdown-item" href="/variabler">Variabler og scope</a></li>
+                <li><a class="dropdown-item" href="/datatyper">Datatyper</a></li>
+                <li><a class="dropdown-item" href="/datastrukturer">Datastrukturer</a></li>
+                <li><a class="dropdown-item" href="/clean-code">Clean code</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section2Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                JavaScript
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section2Dropdown">
+                <li><a class="dropdown-item" href="/funktioner">Funktioner</a></li>
+                <li><a class="dropdown-item" href="/callback-arrow">Arrow og callback-funktioner</a></li>
+                <li><a class="dropdown-item" href="/fetch">Fetch</a></li>
+                <li><a class="dropdown-item" aria-disabled="true" href="/event-loop">Event loop</a></li>
+                <li><a class="dropdown-item" aria-disabled="true" href="/callbacks-vs-promises-vs-async-await">Callbacks vs. Promises vs. Async/Await</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section3Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Node.js
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section3Dropdown">
+                <li><a class="dropdown-item" href="/node">Node.js</a></li>
+                <li><a class="dropdown-item" href="/nodemon">Nodemon</a></li>
+                <li><a class="dropdown-item" href="/package-managers">Package managers</a></li>
+                <li><a class="dropdown-item" href="/entrypoint">Entry point</a></li>
+                <li><a class="dropdown-item" href="/require-vs-import">Require vs import</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section4Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Express
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section4Dropdown">
+                <li><a class="dropdown-item" href="/installere-express">Installere Express</a></li>
+                <li><a class="dropdown-item" href="/express">Express.js</a></li>
+                <li><a class="dropdown-item" href="/middleware">Middleware</a></li>
+                <li><a class="dropdown-item" href="/gitignore">Gitignore</a></li>
+              </ul>
+            </li>
+           
+            
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section6Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Frontend
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section6Dropdown">
+                <li><a class="dropdown-item" href="/html">HTML</a></li>
+                <li><a class="dropdown-item" href="/css">CSS</a></li>
+                <li><a class="dropdown-item" href="/javascript-for-frontend">JavaScript for frontend</a></li>
+                <li><a class="dropdown-item" href="/document-object-model-dom">Document Object Model (DOM)</a></li>
+                <li><a class="dropdown-item" href="/innerhtml-og-cross-site-scripting">InnerHTML og Cross-Site Scripting</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="section7Dropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Deployment/library
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="section7Dropdown">
+                <li><a class="dropdown-item" href="/vercel">Vercel</a></li>
+                <li><a class="dropdown-item" href="/highlight">Highlight</a></li>
+                <li><a class="dropdown-item" href="/inline-vs-external-css">Inline vs. External CSS</a></li>
+                <li><a class="dropdown-item" href="/circular-dependency">Circular Dependency</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Add your login/logout code here -->
+          <div id="loggedInStatus" style="display: none;">
+            <div class="btn-group">
+              <p class="mb-3 mr-2" id="status">Logged in as [username]</p>
+              <button type="button" id="signOutButton" class="btn btn-outline-success font-monospace text-white rounded p-0">Log ud</button>
+            </div>
+          </div>
+
+           <!-- Move the login button to the right -->
+        <div class="d-flex align-items-center justify-content-end">
+          <button
+            type="button"
+            class="btn btn-outline-black font-monospace text-white"
+            data-bs-toggle="modal"
+            data-bs-target="#signInModal"
+            id="signInButton"
+          >
+            Sign in
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Modal for Sign In -->
+  <div class="modal fade custom-modal" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      < class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="signInForm">
+            <div class="mb-3">
+              <label for="email" class="form-label font-monospace">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="test1@gmail.com">
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label font-monospace">Password</label>
+              <input type="password" class="form-control" id="password" name="password" placeholder="test1234">
+            </div>
+          </form>
+          <div id="modalMessageDiv"></div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-dark font-monospace text-black" id="signInModalButton">Sign In</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+
+
+
+  <script type="module" src="./components/navbar/navbar.js"></script>
+</body>
+</html>

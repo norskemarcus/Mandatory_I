@@ -9,7 +9,11 @@ export function readPage(filePath) {
 
 export function renderPage(page, config={}) {
 
-  const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString().
+  // const navbar = fs.readFileSync("./public/components/navbar/navbar.html").toString().
+  // replaceAll("$TAB_TITLE", config.tabTitle || "Kodekilden").
+  // replace("$CSS_LINKS", config.cssLinks || "");
+
+  const navbar = fs.readFileSync("./public/components/navbar/navbar_new.html").toString().
   replaceAll("$TAB_TITLE", config.tabTitle || "Kodekilden").
   replace("$CSS_LINKS", config.cssLinks || "");
 
@@ -20,6 +24,6 @@ export function renderPage(page, config={}) {
   const footer = fs.readFileSync("./public/components/footer/footer.html").toString().
   replace("$CSS_LINKS", config.cssLinks || "");
 
-  return navbar + sidebar + page + footer;
+  return navbar  + page + footer;
   
 }

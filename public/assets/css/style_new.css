@@ -27,16 +27,17 @@ main {
   grid-template-rows: auto 1fr auto; /* Header, content, and footer rows */
   grid-template-areas:
       "header header"
-      "sidebar content"
+      /* "sidebar content" */
       "footer footer";
   min-height: 100vh; 
+  width: 100vh;
 
 }
 
 
 header {
   grid-area: header;
-  background-color: #74d34c; 
+  background-color:  black;
   color: rgb(rgb(58, 55, 55), green, blue); 
   padding: 1rem;
   display: flex;
@@ -104,6 +105,17 @@ li {
   color: black;
 }
 
+#status {
+  margin-right: 10px; 
+}
+
+/* Adjust vertical alignment of the button text */
+#signOutButton {
+  vertical-align: middle;
+  margin-top: -4px; /* Adjust as needed to align the text precisely */
+}
+
+
 
 .responsive-image {
   max-width: 90%;
@@ -150,3 +162,21 @@ li {
   background-color:  #fff;
   color: #3b4044; 
 }
+
+
+
+/* navbar title links */
+.navbar-nav .nav-link {
+  color: gray;
+}
+
+/* dropdown menu items */
+.navbar-nav .dropdown-menu .dropdown-item {
+  color: black;
+}
+
+/* the active link  */
+.navbar-nav .nav-item.active .nav-link {
+  color: whitesmoke;
+}
+
