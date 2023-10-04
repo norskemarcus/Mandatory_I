@@ -32,11 +32,11 @@ $CSS_LINKS
   <body>
     <header>
   
-      <a href="/" class="navbar-link">
-        <i id="home-icon" class="fa fa-home"></i>
+      <a href="/" class="header-icon">
+        <i class="fa fa-home"></i>
       </a>
 
-  <h1 class="header-title">$TAB_H1</h1>
+  <h1 class="header-title">$TAB_TITLE</h1>
 
   <button
     type="button"
@@ -100,11 +100,11 @@ $CSS_LINKS
     <!-- Mobile menu content will be generated dynamically -->
   </div>
 
-    <div class="container-fluid" id="mainContainer">
+  <!-- removed: id="mainContainer" -->
+    <div class="container-fluid gx-0"> 
       <div class="row">
-       <div id="sidebar-placeholder"></div>
-      
-           <main>
+   
+           <main class="gx-0">
 
 
             <script type="module" src="./components/navbar/navbar.js" ></script>

@@ -101,6 +101,7 @@ export const nodemonPage = renderPage(nodemon, {
   tabTitle: "Node",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="./pages/3._node/nodestyle.css">
   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
 });
 

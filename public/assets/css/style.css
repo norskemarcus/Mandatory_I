@@ -1,68 +1,4 @@
 
-/* Apply a CSS reset to remove default margin and padding */
-body, h1, h2, p {
-  margin: 0;
-  padding: 0;
-}
-
-/* Define a grid container to structure the layout */
-.grid-container {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Sidebar and content columns */
-  grid-template-rows: auto 1fr auto; /* Header, content, and footer rows */
-  grid-template-areas:
-      "header header"
-      "sidebar content"
-      "footer footer";
-  min-height: 100vh; /* Ensure the grid takes the full viewport height */
-}
-
-/* Style the header */
-header {
-  grid-area: header;
-  background-color: #333; /* Customize the background color */
-  color: white; /* Customize text color */
-  padding: 1rem;
-}
-
-/* Style the sidebar */
-.sidebar {
-  grid-area: sidebar;
-  background-color: #f5f5f5; /* Customize the background color */
-  padding: 1rem;
-}
-
-/* Style the content area */
-.content {
-  grid-area: content;
-  padding: 1rem;
-}
-
-/* Style the footer */
-.footer {
-  grid-area: footer;
-  background-color: #333; /* Customize the background color */
-  color: white; /* Customize text color */
-  text-align: center;
-  padding: 1rem;
-}
-
-
-/* =====================================================*/
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; 
-  margin: 0;
-}
-
 
 header {
   background-color:#74d34c;
@@ -73,12 +9,6 @@ header {
   justify-content: center; /* Horizontally center the content */
 }
 
-.header-icon {
-  font-size: 24px;
-  margin-right: auto;
-  margin-left: 10px;
-  color: black;
-}
 
 .header-title {
   margin: 0;
@@ -86,34 +16,25 @@ header {
   text-align: center; 
 }
 
-.container {
-  display: flex;
-  justify-content: space-between; /* Add this to separate the sidebar and main content */
-  flex-direction: column; /* Add this line to make it a vertical flex container */
-  min-height: 100vh; /* Ensure the container fills the viewport height */
-}
 
 
-#sidebar-placeholder {
-  width: 0;
-}
-/* Custom styles for the sidebar titles */
 .nav-link {
   color: black; 
 }
+
 .dropdown {
   list-style: none;
   cursor: pointer;
 }
 
-/* Custom styles for dropdown buttons */
+
 .dropdown-btn {
   width: 100%;
   text-align: left;
   margin-bottom: 5px;
 }
 
-/* Custom styles for dropdown menus */
+
 .dropdown-menu {
   margin-left: 5px;
   display: none;
@@ -132,7 +53,6 @@ header {
 }
 
 
-/* Custom modal styles */
 .custom-modal .modal-header {
   background-color: #74d34c;
   color: black; 
@@ -151,21 +71,20 @@ header {
 /* Override Bootstrap's modal backdrop color */
 .modal-backdrop {
   background-color: #74d34c;
- /*  rgba(0, 0, 0, 0.5);  Change to your desired backdrop color */
 }
 
-/* button hover */
+
 .custom-modal .modal-footer #signInModalButton:hover {
   background-color: #74d34c; 
   color: white; 
   border-color: #74d34c; 
 }
 
-
-/* Main content styles */
+/* Gør hovedindholdet fleksibelt og udfyld tilgængelig plads */
+/* 
 #mainContainer {
-  flex-grow: 1;  /* Gør hovedindholdet fleksibelt og udfyld tilgængelig plads */
-}
+  flex-grow: 1;  
+} */
 
 
 /* Hide the hamburger icon by default */
@@ -177,6 +96,8 @@ header {
   margin-top: 20px; 
   margin-bottom: 20px;
 }
+
+
 
 /* CSS styles for the mobile menu */
 .mobile-menu {
