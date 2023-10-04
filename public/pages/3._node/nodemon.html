@@ -42,15 +42,31 @@
     
 
       <section class="bottom-section">
-        <p>Man kan også tilføje en nodemon.json fil der man skriver hvilke extensions den skal lytte til og så i package.json tilføje denne kode under scripts : </p>
+        <p>For at forenkle hvordan man bruger node og nodemon på forskellige maskiner, kan man gøre dette på en anden måde.</p>
+        
+        <p>Man kan tilføje en nodemon.json fil der man skriver hvilke extensions den skal lytte til og så i package.json tilføje denne kode under scripts : </p>
 
-        <pre><code>
+        <pre><code class="responsive-snippet">
+
+          // I terminalen:
+          npm i cross-env
+
+          // I nodemon.json:
+          {
+            "ext": "html, js, json, css"
+          }
+          
+          // I package.json (efter "test"):
           "scripts": {
             "start:def":  "cross-env PORT=8080 nodemon app.js",
             "start:prod": "cross-env PORT=80 node app.js"
           },
         </code></pre>
   
+        <p>Det er vigtigt at nodemon.json og package.json ligger i roden af projektet, på samme niveau - da den ellers ikke klarer at læse nodemon.json.
+         
+
+        </p>
       </section>
     
      

@@ -28,8 +28,7 @@ function handleSignIn() {
   if (email === "test1@gmail.com" && password === "test1234") {
 
     showMessage('success', 'Login successful!', 'modalMessageDiv');
-    console.log('Login successful!');
-    updateStatus('Logged in as: ' + email);
+    updateStatus('Indlogget som: ' + email);
     document.getElementById('signInButton').style.display = 'none'; // Hide Sign In button
     document.getElementById('loggedInStatus').style.display = 'block'; // Show status and Sign Out button
     

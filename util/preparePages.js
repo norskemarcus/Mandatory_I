@@ -22,7 +22,8 @@ export const variablerScopePage = renderPage(variablerScope, {
   tabTitle: "Variabler og scope",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/1._intro/intro.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">`
 });
 
 
@@ -31,7 +32,8 @@ export const datatypesPage = renderPage(datatypes, {
   tabTitle: "Datatyper",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/1._intro/intro.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">`
 });
 
 
@@ -40,7 +42,8 @@ export const datastructurePage = renderPage(datastructure, {
   tabTitle: "Datastrukturer",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/1._intro/intro.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">`
 });
 
 
@@ -58,7 +61,9 @@ export const functionsPage = renderPage(functions, {
   tabTitle: "Funktioner",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  `
 });
 
 
@@ -67,7 +72,8 @@ export const arrowCallbackPage = renderPage(arrowCallback, {
   tabTitle: "Arrow og callback-funktioner",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">`
 });
 
 
@@ -77,7 +83,8 @@ export const fetchPage = renderPage(fetch, {
   tabTitle: "Fetch",
   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
-  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">`
 });
 
 
@@ -127,3 +134,13 @@ export const expressProjectPage = renderPage(expressProject, {
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
 });
+
+
+
+// const middleware = readPage("./public/pages/4._express/middleware.html");
+// export const middlewarePage = renderPage(middleware, {
+//   tabTitle: "Middleware",
+//   cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+//   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+//   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+// });

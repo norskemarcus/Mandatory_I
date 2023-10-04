@@ -50,7 +50,7 @@
         <p>En POST request bruger man til at oprette nye data:</p>
 
         <pre>
-         <code class="responsive-snippet">
+         <code>
     app.post('/api/users', (req, res) => {
       try {
         // Modtag data fra anmodningen
@@ -77,7 +77,7 @@
         <p>Man kan tilsvarende lave et <strong>PATCH request</strong>, hvis man kun ønsker at redigere deler af objektet, eller få parametre. Dette kan være aktuelt, hvis det er tale om meget store objekter, hvor man kun skal opdatere en lille del.</p>
 
         <pre>
-          <code class="responsive-snippet">
+          <code>
     app.put('/api/users/:id', (req, res) => {
       try {
         // Modtag brugerens ID fra anmodningen
@@ -106,7 +106,7 @@
         <p>En DELETE request sletter data ud fra id eller et brugernavn osv.</p>
  
         <pre>
-          <code class="responsive-snippet">
+          <code>
     app.delete('/api/users/:id', (req, res) => {
       try {
         // Modtag brugerens ID fra anmodningen
