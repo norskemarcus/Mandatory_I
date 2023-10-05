@@ -175,3 +175,13 @@ export const middlewarePage = renderPage(middleware, {
   <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
   <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
 });
+
+
+
+const gitignore = readPage("./public/pages/4._express/gitignore.html");
+export const gitignorePage = renderPage(gitignore, {
+  tabTitle: ".gitignore",
+  cssLinks: `<link rel="stylesheet" href="../assets/css/style_new.css">
+  <link rel="stylesheet" href="./pages/2._javascript/javascript.css">
+  <link rel="stylesheet" href="../hightlight/styles/atom-one-dark.min.css">`
+});

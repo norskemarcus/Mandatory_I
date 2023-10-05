@@ -1,0 +1,58 @@
+
+<script src="../hightlight/highlight.min.js"></script>
+
+  <script>
+  hljs.highlightAll();
+  </script>
+
+
+<main class="content">
+  <div class="infobox">
+ 
+ 
+      <p>Når du arbejder med Git, er det vigtigt at bruge en .gitignore-fil til at specificere, hvilke filer og mapper der skal ignoreres og ikke inkluderes i dit repository. Her er trinene til at oprette og bruge en .gitignore-fil:</p>
+
+      <h2>Opret en global Gitignore-fil</h2>
+      <ol>
+        <li>Åbn din terminal.</li>
+        <li>Gå til din hjemmemappe ved hjælp af kommandoen: <code>cd ~</code></li>
+        <li>Hvis du allerede har en .gitignore_global-fil, kan du åbne den i en teksteditor som Nano ved at køre: <code>nano .gitignore_global</code></li>
+        <li>Hvis du ikke har en .gitignore_global-fil, kan du oprette en ved at bruge kommandoen: <code>touch .gitignore_global</code></li>
+        <li>Åbn .gitignore_global-filen i en teksteditor som Nano: <code>nano .gitignore_global</code></li>
+      </ol>
+    
+      <h2>Tilføj indtastninger til Gitignore</h2>
+      <ol>
+        <li>I .gitignore_global-filen skal du tilføje følgende indtastninger for at ignorere Visual Studio Code og IntelliJ IDEA-mapperne:</li>
+        <pre><code class="responsive-snippet-small">
+    .vscode/
+    .idea/
+        </code></pre>
+        <li>Gem ændringerne ved at trykke på <code>Ctrl + O</code> (for at gemme) og derefter <code>Enter</code>. Luk Nano-editoren ved at trykke på <code>Ctrl + X</code>.</li>
+      </ol>
+    
+      <h2>Konfigurér Git til at bruge den globale Gitignore-fil</h2>
+      <p>For at få Git til at bruge den globale .gitignore-fil skal du køre følgende kommando:</p>
+      <pre>
+        <code code class="responsive-snippet-medium">
+    git config --global core.excludesfile ~/.gitignore_global
+      </code>
+      </pre>
+    
+      <h2>Vis indholdet af Gitignore-filen</h2>
+      <p>Hvis du hurtigt vil se indholdet af din .gitignore_global-fil, kan du bruge følgende kommando:</p>
+      <pre><code class="responsive-snippet-small">cat .gitignore_global</code></pre>
+      <p>Hvis filen er lang, kan du bruge kommandoen <code>less</code> til at rulle igennem den:</p>
+      <pre><code class="responsive-snippet-small">less .gitignore_global</code></pre>
+    
+      <h2>Yderligere ressourcer</h2>
+      <p>For mere information og eksempler på Gitignore:</p>
+      <ul>
+        <li><a href="https://git-scm.com/docs/gitignore" target="_blank" rel="noopener noreferrer">Officiel dokumentation</a></li>
+        <li><a href="https://www.toptal.com/developers/gitignore/" target="_blank" rel="noopener noreferrer">Generer din egen gitignore fil</a></li>
+      </ul>
+
+  </div>
+    </main>
+     
+   

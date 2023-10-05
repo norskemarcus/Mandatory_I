@@ -7,7 +7,7 @@ app.use(express.static('public'));
 import {frontpagePage, clientServerPage, variablerScopePage, datatypesPage,
    datastructurePage, cleancodePage, functionsPage, arrowCallbackPage, fetchPage,
     nodePage, nodemonPage, expressPage, expressProjectPage, middlewarePage,
-    packagemanagersPage, entrypointPage, requirePage} from "./util/preparePages.js"
+    packagemanagersPage, entrypointPage, requirePage, gitignorePage} from "./util/preparePages.js"
 
 
 app.get('/', (req, res) => {
@@ -80,10 +80,7 @@ app.get('/package-managers', (req, res) => {
  
 
 
-// Mangler her: Package managers, package.json og meta info, entry point, require og import
-
-
-// -------------------------------------------------------------------------------------------------
+// 4._express-------------------------------------------------------------------------------------------------
 
 app.get('/express', (req, res) => {
   res.send(expressPage);
@@ -96,6 +93,11 @@ app.get('/installere-express', (req, res) => {
 
 app.get('/middleware', (req, res) => {
   res.send(middlewarePage);
+ });
+ 
+
+ app.get('/gitignore', (req, res) => {
+  res.send(gitignorePage);
  });
  
 
