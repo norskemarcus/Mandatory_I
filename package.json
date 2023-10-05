@@ -6,7 +6,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:def": "cross-env PORT=8080 nodemon app.js",
+    "start:dev": "cross-env PORT=8080 nodemon app.js",
     "start:prod": "cross-env PORT=80 node app.js"
   },
   "keywords": [
