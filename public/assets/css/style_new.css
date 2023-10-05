@@ -1,6 +1,7 @@
 
 
 
+
 body {
   overflow-x: hidden;
   max-width: 100%;
@@ -19,13 +20,13 @@ body, h1, h2 {
 
 main {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   background-color: white;
-  flex-grow: 1; /* Allow content to grow and take remaining space */
+  flex-grow: 1; 
   padding: 1rem;
   max-width: 100%;
-
 }
+
 
 
  .header-title {
@@ -64,7 +65,8 @@ main {
   padding: 1rem;
   margin-top: 1rem;
   max-width: 100%;
- 
+  min-height: 67vh; 
+
 }
 
 .infobox {
@@ -86,6 +88,7 @@ main {
   color: white; 
   text-align: center;
 }
+
 
 
 h2 {
@@ -117,7 +120,7 @@ li {
   margin-right: 10px; 
 }
 
-/* Adjust vertical alignment of the button text */
+
 #signOutButton {
   vertical-align: middle;
   margin-top: -4px; /* Adjust as needed to align the text precisely */
@@ -130,11 +133,6 @@ li {
   height: auto;
 }
 
-/* .responsive-snippet {
-  max-width: 100%; 
-  width: auto; 
-  height: auto;
-} */
 
 .responsive-snippet {
    max-width: 70%; /* Expand to 100% of container width */
@@ -205,6 +203,10 @@ li {
 
 
 
+
+
+
+
 @media screen and (max-width: 1067px) {
   .header-title {
     margin-left: 0; 
@@ -222,7 +224,39 @@ li {
     max-width: 100%;
     width: auto; 
     height: auto;
+    padding: 0;
+    margin: 0
   }
   
+
+  pre {
+    font-size: 12px; 
+  }
+
+  code {
+    font-size: 12px; 
+  }
   
+  .content {
+    grid-area: content;
+    padding: 0;
+    margin-top: 0;
+    max-width: 100%;
+    margin: 0;
+   
+  }
+  
+
+  .infobox {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 0;  
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+
 }

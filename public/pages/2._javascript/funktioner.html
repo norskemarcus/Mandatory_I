@@ -33,14 +33,14 @@
             En funktionsdeklaration bruger nøgleordet <strong>function</strong> til at definere en funktion og tildele den et navn. Funktionen kan derefter kaldes, når som helst i koden, da den er blevet "hoistet" til toppen af sit scope. 
           </p>
           <p>
-            <strong>Hoisting</strong> kan forstås som at det ”bobbler op” , det vil sige at variablen og funktionen ”løftes” til toppen af deres omgivende scope. Derfor vil man kunne deklarere en funktion nedenunder en console.log , fordi de havner i samme callstack. Koden er dog ikke så læsbar, særlig hvis funktionen indeholder en større mængde logik. Da vil det være god kodepraksis og placere funktionen over det sted, hvor den kaldes.
+            <strong>Hoisting</strong> kan forstås som at det ”bobbler op” , det vil sige at variablen og funktionen ”løftes” til toppen af deres omgivende scope. Derfor vil man kunne deklarere en funktion nedenunder en console.log , fordi de havner i samme <strong>callstack</strong> (forklares længere nede). Koden er dog ikke så læsbar, særlig hvis funktionen indeholder en større mængde logik. Da vil det være god kodepraksis og placere funktionen over det sted, hvor den kaldes.
           </p>
           <pre><code class="responsive-snippet-small">
-            console.log(sum(2,2));
+    console.log(sum(2,2));
 
-            function sum(a, b) {
-              return a + b;
-            }
+    function sum(a, b) {
+      return a + b;
+    }
           </code></pre>
       
           <p><strong>Funktionsudtryk:</strong></p>
@@ -48,15 +48,23 @@
           <p>
             En funktionsudtryk opretter en anonym funktion og tildeler den til en variabel. Funktionen kan kun kaldes, efter variablen er blevet tildelt.
           </p>
-          <pre><code class="responsive-snippet-small">const sum = function(a, b) {
-        return a + b;
-      };</code></pre>
+          <pre><code class="responsive-snippet-small">
+    const sum = function(a, b) {
+      return a + b;
+    };
+          </code></pre>
       
           <p>
             Forskellen ligger i, hvordan de håndteres under hoisting og tilgængelighed
             i forskellige dele af koden.
           </p>
         </section>
+
+        <section class="section-text">
+          <h2>Callstack</h2>
+          <p>
+            En callstack er en datastruktur, der anvendes i programmering til at spore, hvor programmet befinder sig i sin eksekvering. Eksekvering refererer til processen med at køre eller udføre en sekvens af instruktioner eller kode i et computerprogram. Det fungerer som en stak (en slags liste), hvor hver funktion eller metodekald, der udføres i programmet, tilføjes til toppen af ​​stakken, og når funktionen er færdig med at køre, fjernes den fra stakken.
+          </p>
       
         <section class="section-text">
           <h2>Argumenter og parametre</h2>
@@ -94,7 +102,7 @@
           </code></pre>
         </section>
       
-        < class="section-text">
+        <div class="section-text">
           <h2>Anonyme funktioner</h2>
           <p>
             Anonyme funktioner er funktioner uden navn og bruges ofte som argumenter til

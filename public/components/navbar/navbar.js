@@ -98,27 +98,3 @@ function handleSignOut() {
 
 
 
-/* 
-
-const mobileMenuIcon = document.getElementById("mobileMenuIcon");
-mobileMenuIcon.addEventListener("click", toggleMobileMenu);
-
-// Function to toggle the mobile menu
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.toggle("show");
-}
-
-
-function generateMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.innerHTML = ""; // Clear the existing content
-
-  // Clone and append each main menu item to the mobile menu
-  const mainMenuItems = document.querySelectorAll(".nav-item.dropdown");
-  mainMenuItems.forEach((menuItem) => {
-    const mobileMenuItem = menuItem.cloneNode(true);
-    mobileMenuItem.classList.add("mobile-menu-item");
-    mobileMenu.appendChild(mobileMenuItem);
-  });
-} */
