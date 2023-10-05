@@ -27,13 +27,15 @@ main {
 
 }
 
-/* Custom CSS for centering the title */
-/* .header-title-container {
+
+ .header-title {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+  margin-left: -10em; /* Force the title to the middle*/
+
 }
- */
+ 
 
 
 .grid-container {
@@ -200,7 +202,14 @@ li {
   border: none;
 }
 
-/* OBS ændre størrelse på snippets og billeder på en mobil skærme! */
+
+
+
+@media screen and (max-width: 1067px) {
+  .header-title {
+    margin-left: 0; 
+  }
+}
 
 /* Media query for smaller screens (e.g., mobile devices) */
 @media (max-width: 767px) {
