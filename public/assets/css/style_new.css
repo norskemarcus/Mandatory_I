@@ -4,6 +4,10 @@
 body {
   overflow-x: hidden;
   max-width: 100%;
+  margin: 0; /* Add margin to the body */
+  display: flex;
+  flex-direction: column; /* Stack header, content, and footer vertically */
+  min-height: 100vh; /* Ensure at least viewport height */
 }
 
 body, h1, h2 {
@@ -17,6 +21,9 @@ main {
   margin: 0;
   padding: 0;
   background-color: white;
+  flex-grow: 1; /* Allow content to grow and take remaining space */
+  padding: 1rem;
+  max-width: 100%;
 
 }
 
@@ -67,7 +74,8 @@ header {
   border-radius: 5px;
   margin: 10px 0;  
   width: 90%;
-  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 
@@ -122,21 +130,30 @@ li {
   height: auto;
 }
 
-.responsive-snippet {
-  max-width: 70%;
+/* .responsive-snippet {
+  max-width: 100%; 
+  width: auto; 
   height: auto;
+} */
+
+.responsive-snippet {
+   max-width: 70%; /* Expand to 100% of container width */
+   width: auto; 
+   height: auto;
 }
 
 .responsive-snippet-small {
   max-width: 30%;
+  width: auto; 
   height: auto;
 }
 
 
 .responsive-snippet-medium {
   max-width: 50%;
+  width: auto; 
   height: auto;
-}
+} 
 
 
 #scrollToTopButton {
@@ -180,3 +197,25 @@ li {
   color: whitesmoke;
 }
 
+
+.dropdown-toggle::after {
+  border: none;
+}
+
+/* OBS ændre størrelse på snippets og billeder på en mobil skærme! */
+
+/* Media query for smaller screens (e.g., mobile devices) */
+@media (max-width: 767px) {
+  
+
+  .responsive-snippet-small,
+  .responsive-snippet-medium,
+  .responsive-snippet,
+  .responsive-image {
+    max-width: 100%;
+    width: auto; 
+    height: auto;
+  }
+  
+  
+}

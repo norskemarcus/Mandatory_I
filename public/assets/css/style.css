@@ -156,32 +156,11 @@ footer {
 
 /* CSS for Mobile Screens */
 @media screen and (max-width: 768px) {
-  /* Hide the sidebar by default on mobile */
-  .sidebar {
-    display: none;
-  }
-/* Show the hamburger icon */
-  .icon {
-    /* display: inline-block; */
-    display: block;
-    color: black;
-    margin-left: 10px;
-  }
- 
+  
   .header-title {
   text-align: center;
   }
 
-
-  /* Show the mobile menu when the sidebar is hidden */
-  /* #mobile-menu {
-    display: block;
-  } */
-
-    /* Show the mobile menu when the hamburger icon is clicked */
-    .mobile-menu.show {
-      display: block;
-    }
 
   /* Make dropdown menus full width on mobile */
   .dropdown-menu {
@@ -234,17 +213,4 @@ footer {
 
 
 }
-
-/* CSS for Larger Screens */
-@media screen and (min-width: 769px) {
-  /* Show the sidebar on larger screens */
-  .sidebar {
-    display: flex;
-  }
-
-  /* Hide the mobile menu on larger screens */
-  #mobile-menu {
-    display: none;
-  }
-} 
 
