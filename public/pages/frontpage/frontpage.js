@@ -103,9 +103,9 @@ function calculateDaysUntil(targetDate) {
 }
 
 // måneder i JavaScript er 0-indekseret, så november er 10
-const dec1Date = new Date(new Date().getFullYear(), 10, 1);
-
-const christmasDate = new Date(new Date().getFullYear(), 11, 24);
+const currentDate = new Date();
+const dec1Date = new Date(currentDate.getFullYear(), 11, 1); 
+const christmasDate = new Date(currentDate.getFullYear(), 11, 24); 
 
 const daysUntilDec1 = calculateDaysUntil(dec1Date);
 
