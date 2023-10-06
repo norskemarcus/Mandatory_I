@@ -99,28 +99,23 @@ function handleSignOut() {
 
 
 
-
-/* 
-
-const mobileMenuIcon = document.getElementById("mobileMenuIcon");
-mobileMenuIcon.addEventListener("click", toggleMobileMenu);
-
-// Function to toggle the mobile menu
-function toggleMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.classList.toggle("show");
+function calculateDaysUntil(targetDate) {
+  const currentDate = new Date();
+  const timeDifference = targetDate - currentDate;
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+  return daysDifference;
 }
 
+// Dato for 1. december (måneder i JavaScript er 0-indekseret, så november er 10)
+const dec1Date = new Date(new Date().getFullYear(), 10, 1);
 
-function generateMobileMenu() {
-  const mobileMenu = document.getElementById("mobileMenu");
-  mobileMenu.innerHTML = ""; // Clear the existing content
+// Dato for julaften
+const christmasDate = new Date(new Date().getFullYear(), 11, 24);
 
-  // Clone and append each main menu item to the mobile menu
-  const mainMenuItems = document.querySelectorAll(".nav-item.dropdown");
-  mainMenuItems.forEach((menuItem) => {
-    const mobileMenuItem = menuItem.cloneNode(true);
-    mobileMenuItem.classList.add("mobile-menu-item");
-    mobileMenu.appendChild(mobileMenuItem);
-  });
-} */
+// Opdater antallet af dage til 1. december
+const daysUntilDec1 = calculateDaysUntil(dec1Date);
+document.getElementById('countdown-to-dec1').textContent = `Dage til 1. december: ${daysUntilDec1}`;
+
+// Opdater antallet af dage til julaften
+const daysUntilChristmas = calculateDaysUntil(christmasDate);
+document.getElementById('countdown-to-christmas').textContent = `Dage til julaften: ${daysUntilChristmas}`;
