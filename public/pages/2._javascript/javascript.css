@@ -16,7 +16,7 @@ pre {
   list-style-type: none;
 }
 
-.responsive-image {
+/* .responsive-image {
   max-width: 90%;
   height: auto;
 }
@@ -29,7 +29,7 @@ pre {
 .responsive-snippet-small {
   max-width: 30%;
   height: auto;
-}
+} */
 
 
 .bottom-section {

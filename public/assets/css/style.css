@@ -82,7 +82,7 @@ header {
 
 
 /* Hide the hamburger icon by default */
-.icon {
+/* .icon {
   display: none;
 }
 
@@ -90,11 +90,11 @@ header {
   margin-top: 20px; 
   margin-bottom: 20px;
 }
-
+ */
 
 
 /* CSS styles for the mobile menu */
-.mobile-menu {
+/* .mobile-menu {
   display: none;
   background-color: #74d34c;
   position: absolute;
@@ -102,7 +102,7 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
-}
+} */
 
 .mobile-menu-item {
   display: block;
